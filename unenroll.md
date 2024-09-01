@@ -7,7 +7,9 @@ Every method except the Shim method requires FWMP to be missing as Developer Mod
 
 ## What Kernver and ChromeOS version do I have?
 To verify your kernver and your ChromeOS version, you need to first boot ChromeOS and then press `alt+v`, you will find a number followed by other numbers, only the first 2 or 3 numbers matter, such as `94`, `110` or `127`. Take note of this number and find the method related. If it is `120` or higher, you should check your kernver. Press `esc+⟳+⏻ `, and then `tab`. 
+
 On `oldui` boards (with a white background, such as `snappy` or `octopus`), you just scroll down with your eyes until you find `tpm_ver`, and then look to the right of that to find `kernver`, and your kernver will be the last number to the right of kernver, this means `kernver=0x00010004` is kernver 4 or kv4.
+
 On `newui` boards like `nissa` or `dedede`, you have to use the  key to scroll down to the bottom where you should find kernver
 
 # How?
