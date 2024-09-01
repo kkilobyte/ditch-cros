@@ -18,7 +18,7 @@ Solution? Ditch ChromeOS. How? Keep reading.
 The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but comes with some issues like not being able to use Chrome OS at all unless the stock firmware is restored, and is the only way to run Windows with proper drivers. The follow guide is for Cr50 Chromebooks with the "Cr50 (Battery)" WP method, use [MrChromebox's device table](https://docs.mrchromebox.tech/docs/supported-devices.html) to find your WP method.
 
 1. Backup ALL data using external media or a cloud service.
-2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use SH1mmer's "deprovision" payload to unenroll on Chrome OS v110 and older, you can use SH1mmer's "Cryptosmite" payload to unenroll on Chrome OS v118 and older, you can use "OlyBmmer" to unenroll Chrome OS v124 and older when it releases, and you can use "icarus" to unenroll Chrome OS v130 and older when it releases. If you are not using a business device, FWMP should already be disabled.
+2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
 3. Enter developer mode by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
 4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
 5. When Chrome OS boots to "Welcome to your Chromebook", open the Quick Settings menu in the bottom right and click Wi-Fi, and connect to your Wi-Fi.
@@ -52,7 +52,7 @@ RW_Legacy is the payload that brings Coreboot_SeaBIOS to Chromebooks that are Ap
 EOL Chromebooks do not support either. Windows is ***NOT*** supported and you ***will*** run into issues. You can get a usable experience with AltFw or RW_Legacy but it's not the best.
 
 1. Back up all data using external media or a cloud service like Google Drive. 
-2. Make sure FWMP is off and you are unenrolled, follow Step 2 of Method 1: FullROM to unenroll.
+2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
 3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
 4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
 5. When Chrome OS boots to "Welcome to your Chromebook", open the Quick Settings menu in the bottom right and click Wi-Fi, and connect to your Wi-Fi.
