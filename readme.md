@@ -74,9 +74,10 @@ wip
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
-3. No ARM support EXCEPT with 
+3. No ARM support EXCEPT with method 4.
+4. Paid Windows driver, (support CoolStar anyways).
 ## Full ROM
-1. No Chrome or Chromium OS support. (including Flex/fydeOS/Brunch)
+1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
 2. Requires WP to be OFF
 3. Requires an unenrolled device.
 ## AltFw
