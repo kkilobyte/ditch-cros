@@ -85,7 +85,7 @@ wip
 8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
 9. Backlight is *currently* broken on AMD Cezanne devices.
 ## RW_Legacy
-Same as AltFw BUT ALSO
+EVERY AltFw issue (except AltFw issue #7) PLUS
 1. broken suspend (at least on `snappy`)
 2. BIOS-only / no UEFI
 ## Shim
