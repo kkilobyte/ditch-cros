@@ -1,6 +1,6 @@
 # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
 ## Why?
-Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep (or you can press Ctrl+D on boot) and use Chromebrew, which is slow, storage-heavy, and just a pain in the ass.
+Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep (or you can press Ctrl+D on boot) and use Chromebrew, which is kind of a pain in the ass and slow, along with taking up a lot of extra storage.
 
 Solution? Ditch ChromeOS. How? Keep reading.
 
