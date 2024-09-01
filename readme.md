@@ -5,7 +5,7 @@ Well for starters, Chrome OS is a bad operating system, since Google wants to pu
 Solution? Ditch ChromeOS. How? Keep reading.
 
 ## Picture Evidence
-no img yet im slow af
+
 
 # How?
 ## Method 1: Best Method (FullROM)
