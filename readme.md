@@ -72,7 +72,16 @@ EOL Chromebooks do not support either. Windows is ***NOT*** supported and you **
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 3: Shim
-wip
+WIP GUIDE!!!!
+
+Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as weird as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
+
+1. Decide on rather you want Shimboot (Debian) or TerraOS (Arch). Shimboot is better maintained and TerraOS's systemd is outdated.
+2. Login to your Chromebook
+1. Back up ALL data using external media or a cloud service.
+2. Download 
+. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
+. Depending on rather you have FWMP or not, you might be on a screen that says 
 
 ## Method 4: 
 
