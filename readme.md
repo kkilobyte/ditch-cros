@@ -1,6 +1,6 @@
 # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
 ## Why?
-Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep (or you can press Ctrl+D on boot) and use Chromebrew, which is kind of a pain in the ass. 
+Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep (or you can press Ctrl+D on boot) and use Chromebrew, which is slow, storage-heavy, and just a pain in the ass.
 
 Solution? Ditch ChromeOS. How? Keep reading.
 
@@ -63,21 +63,27 @@ AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't E
 ## Method 3: Shim
 wip
 
+## Method 4: 
+
 # Issues
 ## General
-1. no ubuntu support (fuck ubuntu)
+1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
+2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
+3. No ARM support EXCEPT with 
 ## Full ROM
-1. no chrome or chromium OS support (including flex/fydeOS/brunch)
-2. requires WP off
-3. requires unenrollment
+1. No Chrome or Chromium OS support. (including Flex/fydeOS/Brunch)
+2. Requires WP to be OFF
+3. Requires an unenrolled device.
 ## AltFw
-1. no touchscreen
-2. no windows support (broken touchpad and touchscreen)
-3. requires a key combo on boot
-4. requires unenrollment
-5. broken on grunt
-6. not available for EOL
-7. UEFI-only / no BIOS/CSM 
+1. No touchscreen.
+2. No Windows support. (You will run into driver issues, like with the touchscreen or trackpad.)
+3. Requires a key combo to boot. (Workaround exists but requires WP to be OFF to change GBB flags.)
+4. Requires an unenrolled device.
+5. AltFw payload list works but does not display correctly on Intel Geminilake devices.
+6. Not available for EOL devices.
+7. AltFw is UEFI-only / there is no BIOS/CSM.
+8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
+9. Backlight is *currently* broken on AMD Cezanne devices.
 ## RW_Legacy
 Same as AltFw BUT ALSO
 1. broken suspend (at least on `snappy`)
