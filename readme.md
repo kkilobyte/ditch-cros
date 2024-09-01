@@ -81,12 +81,12 @@ wip
 4. Requires an unenrolled device.
 5. AltFw payload list works but does not display correctly on Intel Geminilake devices.
 6. Not available for EOL devices.
-7. AltFw is UEFI-only / there is no BIOS/CSM.
+7. UEFI-only / no BIOS/CSM.
 8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
 9. Backlight is *currently* broken on AMD Cezanne devices.
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
-1. broken suspend (at least on `snappy`)
+1. Broken suspend (at least on `snappy`).
 2. BIOS-only / no UEFI
 ## Shim
 1. relies on a leaked rma shim meaning 90% of chromebooks aren't supported
@@ -99,3 +99,4 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 8. no windows
 9. requires a leaked shim
 10. weird screen drawing issue on `grunt` where you have to constantly switch to and from a tty to draw the next frame in x11
+##
