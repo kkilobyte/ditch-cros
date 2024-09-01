@@ -16,7 +16,7 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmmer'
 1. sh1mmer steps here (flash > boot > press d > reboot)
 
 ## ChromeOS v118 and below - CryptoSmite
-The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode and use ChromeOS, or install FullROM/AltFw/RW_Legacy.
+The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
 
 1. cryptosmite steps here (flash > boot > press p > cryptosmite > connect wifi > enable devmode)
 
