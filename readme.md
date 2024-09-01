@@ -34,8 +34,8 @@ The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but c
 24. Follow [Chrultrabook's guide](https://docs.chrultrabook.com/docs/installing/installing-linux.html) to install Linux or follow [Coolstar's guide](https://coolstar.org/chromebook/windows-install.html) to install Windows.
 25. Hooray!
 26. Bonus:
-a. Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
-b. Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
+- Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
+- Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 2: Easiest Method (AltFw & RW_Legacy)
 AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't EOL and aren't Apollolake and older. RW_Legacy is the payload that brings Coreboot_SeaBIOS to Chromebooks that are Apollolake and older. EOL Chromebooks do not support either. Windows is ***NOT*** supported and you ***will*** run into issues.
@@ -57,8 +57,8 @@ AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't E
 15. Follow [Chrultrabook's guide](https://docs.chrultrabook.com/docs/installing/installing-linux.html) to install Linux or follow [Coolstar's guide](https://coolstar.org/chromebook/windows-install.html) to install Windows.
 16. Hooray!
 17. Bonus:
-a. Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
-b. Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
+- Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
+- Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 3: Shim
 
