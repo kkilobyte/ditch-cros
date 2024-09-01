@@ -15,7 +15,7 @@ On `newui` boards like `nissa` or `dedede`, you have to use the  key to scroll d
 # How?
 
 ## ChromeOS v110 and below - SH1mmer
-The preferred unenrollment method for ChromeOS v110 and below is using SH1mmmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
+The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
 
 1. sh1mmer steps here (flash > boot > press d > reboot)
 
