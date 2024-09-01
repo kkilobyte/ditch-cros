@@ -5,9 +5,9 @@ Well for starters, Chrome OS is a bad operating system, since Google wants to pu
 Solution? Ditch ChromeOS. How? Keep reading.
 
 ## Picture Evidence
-| <img src="/img/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (snappy alan) w/ Full ROM." width="400"/> | <img src="/img/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (octopus phaser360)." width="400"/> |  
+| <img src="/img/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (snappy alan) w/ Full ROM" width="400"/> | <img src="/img/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (octopus phaser360) w/ Shimboot" width="400"/> |  
 | ----- | ----- |
-| Shimboot (KDE) on an HP Chromebook 11 G9 EE | Shimboot (XFCE) on an Acer Chromebook 311 C722 |
+| Alpine Edge KDE on a HP Chromebook 11 G6 EE (snappy alan) w/ Full ROM | DebiDebian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (octopus phaser360) w/ Shimboot |
 
 # How?
 ## Method 1: Best Method (FullROM)
