@@ -9,7 +9,7 @@ Solution? Ditch ChromeOS. How? Keep reading.
 | ----- | ----- |
 | Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot |
 
-| <img src="/img/vortininja-and-fleex-fullrom-arch-kde.jpg" alt="Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM" width="500"/>|
+| <img src="/img/vortininja-and-fleex-fullrom-arch-kde.jpg" alt="Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM" width="500"/> |
 | ----- |
 | Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM |
 
@@ -77,13 +77,34 @@ WIP GUIDE!!!!
 Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as weird as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
 
 1. Decide on rather you want Shimboot (Debian) or TerraOS (Arch). Shimboot is better maintained and TerraOS's systemd is outdated.
-2. Login to your Chromebook
-1. Back up ALL data using external media or a cloud service.
-2. Download 
-. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
-. Depending on rather you have FWMP or not, you might be on a screen that says 
+2. Figure out your [device board](/device-identify.md#board-name).
+3. If you want Shimboot, get the latest build for your board from [ading2210/shimboot/releases](https://github.com/ading2210/shimboot/releases) or [dl.darkn.bio/shimboot](https://dl.darkn.bio/Shimboot). If you want you TerraOS, get the latest build for your board from [files.mercurywork.shop/r58playz/terraos/arch-images/](http://files.mercurywork.shop/r58playz/terraos/arch-images/).
+3a. If your board does not show, you will have to manually build using a personal device. [/r58playz/terraos](https://github.com/r58playz/terraos) | [/ading2210/shimboot](https://github.com/ading2210/shimboot)
+3b. You can grab raw unmodified RMA shims from [dl.darkn.bio/sh1mmer/raw](https://dl.darkn.bio/SH1mmer/Raw).
+4. Once you obtain a Shimboot/TerraOS shim for your device, flash it to a USB drive. If you are using Windows/MacOS/ChromeOS to flash, use [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash. If you are using Linux, run `lsblk`, find your USB drive, find your Linux shim, and run `sudo dd if=<linux shim> of=/dev/<usb drive> oflag=direct status=progress bs=16M`.
+5. If you are using TerraOS, run `sudo growpart /dev/<usb drive> 4` and `sudo resize2fs /dev/<usb drive>4` you might need to install `cloud-utils-growpart` and `e2fsprogs`.
+6. Back up ALL data using external media or a cloud service.
+7. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
+8. There might be mysterious black text in the top left corner, ignore this and press `esc+⟳+⏻ ` again and insert your Linux shim USB.
+9. On Shimboot, press `3` and then `enter`, on TerraOS, press `->` and then `enter`, and then `🠟` twice, and then `enter`.
+10. You should be greeted with a login page. On Shimboot, put `user` as the username and password, on TerraOS put `terraos` as the username and password.
+11. On Shimboot, open a terminal with `ctrl+alt+t` and then run `sudo expand_rootfs`. TerraOS users may skip this step.
 
-## Method 4: 
+You are now in a Xfce enviroment on your USB drive, if you want to flash to your eMMC/internal storage and replace chromeOS, continue with steps 12 to 16, otherwise skip to 17.
+
+12. You can use the computer you flashed to put the Shimboot/TerraOS image onto `/home/user/` (on Shimboot) or `/home/terraos` (on TerraOS) or you can download the Linux shim image inside of Xfce.
+13. Boot back into Xfce (if you need to), open a terminal, and run `lsblk`, find the option the has mmcblk, and check if it has `0` or `1`.
+14. Now run `sudo dd if=<shim image> of=/dev/mmblk<num> bs=16M status=progress oflag=direct`, and then `sudo reboot`.
+15. Boot back into the bootloader, on Shimboot press `1` and then `enter`, on TerraOS press `->` and then `enter`.
+16. Login with `user` for user/pass on Shimboot, login with `terraos` for user/pass on TerraOS.
+
+You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.
+
+17. Bonus:
+- Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
+- Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
+
+## Method 4: W.I.P.
 
 # Issues
 ## General
