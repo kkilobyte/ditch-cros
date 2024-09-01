@@ -39,7 +39,7 @@ These versions are basically the same. You have full access to any ChromeOS vers
 You have full access to ChromeOS v112 and above, if you are on ChromeOS v119 or above, you can downgrade to ChromeOS v112 to use Cryptosmite.
 
 ## Kernver 3
-There is nothing you can do except wait for OlyBmmer release. If you are on ChromeOS v125 or above, you can downgrade to ChromeOS v120 and then use [CAUB](https://caub.glitch.me), if that site is blocked you can download the HTML at [bypassiwastaken/tinies](https://github.com/bypassiwastaken/tinies).
+There is nothing you can do except wait for OlyBmmer release. If you are on ChromeOS v125 or above, you can downgrade to ChromeOS v120 and then use [caub](https://caub.glitch.me), if that site is blocked you can download the HTML at [bypassiwastaken/tinies](https://github.com/bypassiwastaken/tinies).
 
 ## Kernver 4
 There is nothing you can do except wait for icarus release or cry. On newui boards like `dedede` or `nissa`, most devices with kv4 will have their *shim keys rolled*, meaning old shims will no longer work, and the new shims with the new keys have rootfs verification, meaning there will never be a shim-based unenrollment or Linux enviroment again unless we find new shims and find a way to get around verification. 
