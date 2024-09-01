@@ -61,7 +61,7 @@ AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't E
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 3: Shim
-
+wip
 
 # Issues
 ## General
@@ -73,7 +73,7 @@ AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't E
 ## AltFw
 1. no touchscreen
 2. no windows support (broken touchpad and touchscreen)
-3. requires key combo on boot
+3. requires a key combo on boot
 4. requires unenrollment
 5. broken on grunt
 6. not available for EOL
@@ -83,14 +83,13 @@ Same as AltFw BUT ALSO
 1. broken suspend (at least on `snappy`)
 2. BIOS-only / no UEFI
 ## Shim
-1. no suspend (shim kernel restrictions)
-2. forced to use an old insecure kernel (linux kernel 4.14 on `octopus`)
-3. no swap (shim kernel restrictions)
-4. no audio (depends on board, `octopus` has working audio)
-5. no x11/wayland (on older boards like `kefka` or `reks`)
-6. broken gpu accel at times (for example: x11 on `octopus` or gnome wayland)
-7. requires key combo and key inputs to boot
-8. requires manual building for everything but debian (in shimboot) or chromeOS and arch (in terraOS)
-9. no windows
-10. requires a leaked shim
-11. weird screen drawing issue on `grunt` where you have to open a tty to draw the next frame in x11
+1. relies on a leaked rma shim meaning 90% of chromebooks aren't supported
+2. relies on a glorified chroot
+3. rma shim is never updated including the linux kernel, on `octopus` chromebooks you get linux 4.14, on `dedede` chromebooks you get linux 5.1, on `reks` and `kefka` you get a linux kernel too old to run x11!
+4. the kernel has a bad configuration (since normal rma shims aren't meant for normal linux) meaning you get no audio (on boards like `nissa` and `dedede`) and no suspend or swap on all boards
+5. broken gpu accel at times (for example: x11 on `octopus` or gnome wayland)
+6. requires a key combo and a few key inputs to boot
+7. requires manual building for everything but debian (in shimboot) or chromeOS and arch (in terraOS)
+8. no windows
+9. requires a leaked shim
+10. weird screen drawing issue on `grunt` where you have to constantly switch to and from a tty to draw the next frame in x11
