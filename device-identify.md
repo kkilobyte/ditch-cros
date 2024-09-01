@@ -17,12 +17,12 @@ Your Chromebook *model name* does not matter. Your Chromebook *board name* matte
 ## Code name
 ### Method 1
 1. Login to your Chromebook.
-2. Press `ctrl+🔍+esc`
+2. Press `ctrl+🔍+esc`.
 3. The weird looking word before the random string of numbers (and sometimes after your *model number*) is your *code name*. Examples: `vortininja`, `phaser360`, `fleex`, `bluebird`, `snappy`, `kefka`, etc.
 
 ### Method 2
 1. Press `esc+⟳+⏻ `. 
-2. The weird looking word before your ChromeOS version is your *code name*.
+2. The weird looking word before a random string of letters and numbers is your *code name*.
 
 ## Model name
 ### Method 1
@@ -30,5 +30,8 @@ Your Chromebook *model name* does not matter. Your Chromebook *board name* matte
 2. Look for your model name. Example: `Dell Chromebook 3100`.
 
 ### Method 2
-1. Press `esc+⟳+⏻ `. 
+1. Press `ctrl+🔍+esc`. 
 2. The *model name* will be before your *code name* and ChromeOS version.
+
+### Method 3
+1. Use your code name on https://cros.tech to get your model number
