@@ -4,6 +4,9 @@ Well for starters, Chrome OS is a bad operating system, since Google wants to pu
 
 Solution? Ditch ChromeOS. How? Keep reading.
 
+## Picture Evidence
+no img yet im slow af
+
 # How?
 ## Method 1: Best Method (FullROM)
 The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but comes with some issues like not being able to use Chrome OS at all unless the stock firmware is restored, and is the only way to run Windows with proper drivers. The follow guide is for Cr50 Chromebooks with the "Cr50 (Battery)" WP method, use [MrChromebox's device table](https://docs.mrchromebox.tech/docs/supported-devices.html) to find your WP method.
@@ -38,7 +41,9 @@ The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but c
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 2: Easiest Method (AltFw & RW_Legacy)
-AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't EOL and aren't Apollolake and older. RW_Legacy is the payload that brings Coreboot_SeaBIOS to Chromebooks that are Apollolake and older. EOL Chromebooks do not support either. Windows is ***NOT*** supported and you ***will*** run into issues.
+AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't EOL and aren't Apollolake and older. 
+RW_Legacy is the payload that brings Coreboot_SeaBIOS to Chromebooks that are Apollolake and older. 
+EOL Chromebooks do not support either. Windows is ***NOT*** supported and you ***will*** run into issues. You can get a usable experience with AltFw or RW_Legacy but it's not the best.
 
 1. Back up all data using external media or a cloud service like Google Drive. 
 2. Make sure FWMP is off and you are unenrolled, follow Step 2 of Method 1: FullROM to unenroll.
@@ -75,7 +80,7 @@ wip
 2. Requires WP to be OFF
 3. Requires an unenrolled device.
 ## AltFw
-1. No touchscreen.
+1. No touchscreen (at least not on `octopus`).
 2. No Windows support. (You will run into driver issues, like with the touchscreen or trackpad.)
 3. Requires a key combo to boot. (Workaround exists but requires WP to be OFF to change GBB flags.)
 4. Requires an unenrolled device.
@@ -98,4 +103,5 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 7. Requires manual building for Linux distros that are not Debian 12 Stable (in Shimboot) or Chrome OS Flex v109 and Arch Linux (in TerraOS).
 8. No Windows support AT ALL. Even if you tried, the RMA shim runs the ***Linux kernel*** while Windows runs the ***NT kernel***, and even if you got NT in the shim, you wouldn't be able to "chroot" or whatever.
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
+12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
 ##
