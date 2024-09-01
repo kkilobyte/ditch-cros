@@ -79,7 +79,7 @@ wip
 2. No Windows support. (You will run into driver issues, like with the touchscreen or trackpad.)
 3. Requires a key combo to boot. (Workaround exists but requires WP to be OFF to change GBB flags.)
 4. Requires an unenrolled device.
-5. AltFw payload list works but does not display correctly on Intel Geminilake devices.
+5. AltFw payload list works but does not display correctly on Intel Geminilake devices. Just press "1" on the `ctrl+l` (L) menu.
 6. Not available for EOL devices.
 7. UEFI-only / no BIOS/CSM.
 8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
@@ -87,16 +87,15 @@ wip
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
 1. Broken suspend (at least on `snappy`).
-2. BIOS-only / no UEFI
+2. BIOS-only / no UEFI.
 ## Shim
-1. relies on a leaked rma shim meaning 90% of chromebooks aren't supported
-2. relies on a glorified chroot
-3. rma shim is never updated including the linux kernel, on `octopus` chromebooks you get linux 4.14, on `dedede` chromebooks you get linux 5.1, on `reks` and `kefka` you get a linux kernel too old to run x11!
-4. the kernel has a bad configuration (since normal rma shims aren't meant for normal linux) meaning you get no audio (on boards like `nissa` and `dedede`) and no suspend or swap on all boards
-5. broken gpu accel at times (for example: x11 on `octopus` or gnome wayland)
-6. requires a key combo and a few key inputs to boot
-7. requires manual building for everything but debian (in shimboot) or chromeOS and arch (in terraOS)
-8. no windows
-9. requires a leaked shim
-10. weird screen drawing issue on `grunt` where you have to constantly switch to and from a tty to draw the next frame in x11
+1. Relies on a leaked RMA shim - thus 90% of Chromebooks aren't supported at all.
+2. Relies on a glorified chroot.
+3. The RMA shim is never updated including the Linux kernel, on `octopus` Chromebooks you get Linux 4.14, on `dedede` Chromebooks you get Linux 5.1, on `reks` and `kefka` you get a Linux kernel too old to run X11!
+4. The kernel has a bad configuration (since normal RMA shims aren't meant for normal desktop Linux,) meaning you get no audio (on boards like `nissa` and `dedede`) and no suspend or swap on all boards.
+5. Broken GPU acceleration half the time. (For example: X11 on my `meep`, `cret`, `phaser360`, and `fleex`, or Gnome Wayland.)
+6. Requires a key combo and a few key inputs to boot.
+7. Requires manual building for Linux distros that are not Debian 12 Stable (in Shimboot) or Chrome OS Flex v109 and Arch Linux (in TerraOS).
+8. No Windows support AT ALL. Even if you tried, the RMA shim runs the ***Linux kernel*** while Windows runs the ***NT kernel***, and even if you got NT in the shim, you wouldn't be able to "chroot" or whatever.
+11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 ##
