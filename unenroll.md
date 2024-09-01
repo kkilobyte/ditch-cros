@@ -32,7 +32,7 @@ The preferred unenrollment method for ChromeOS v124 and below is using OlyBmmer.
 ## UNRELEASED!!: ChromeOS v130 and below - icarus
 I do not have permission to give out information about icarus.
 
-1. icarus steps here (flash > boot > _ > _ > _)
+1. icarus steps here
 
 # Kernver Info
 
