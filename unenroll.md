@@ -44,12 +44,13 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 <img src="/img/tutorial/chrome-recovery-extension.png">
 7. Click on the gear icon in the corner and click "Use local image" and the select your SH1mmer bin file.
 
+
 <img src="/img/tutorial/cru-local-image.png">
 
 8. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 9. Verify this USB drive doesn't have important data and then wait for it to flash.
 10. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
-11. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options, press `d` and then `enter`, this should come with two messages saying "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use Full ROM or AltFw!
+11. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options, press `d` and then `enter`, this should come with two messages saying "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
