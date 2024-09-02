@@ -2,11 +2,9 @@
 ## Why?
 Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. 
 
-The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep (or you can press Ctrl+D on boot) and use Chromebrew, which is kind of a pain in the ass and slow, along with taking up a lot of extra storage.
+The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Debian or Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep and use Chromebrew, which is kind of a pain in the ass and slow, along with taking up a lot of extra storage.
 
-Overall it's unoptimized as fuck and it's difficult to use as fuck. It's very limiting and you are better off using Linux.
-
-Solution? Ditch ChromeOS. How? Keep reading.
+Overall it's unoptimized as fuck and it's difficult to use. It's very limiting and you are better off using literally anything else.
 
 ## Picture Evidence
 | <img src="/img/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
@@ -31,7 +29,7 @@ The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but c
 8. Set the back of the Chromebook on a table, and set your Chromebook on top of the back, but don't click it in or screw it in.
 9. Connect a charger.
 10. Boot ChromeOS, make sure to press `ctrl+d` on the OS verify screen.
-11. Now press `ctrl+alt+🠞` (if you don't have a 🠞 key, press `ctrl+alt+⟳ ` instead).
+11. Now press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳` (refresh, above the 2 or 4) instead).
 12. Now type in `chronos` and press `enter`.
 13. Now type in `cd; curl -LOk https://mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh`.
 14. Your Chromebook might have to reboot, if you are prompted at a `y/n` prompt, press `y` and then `enter`, and wait.
@@ -40,35 +38,36 @@ The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but c
 17. Type in the number for UEFI, in my case it is 2.
 18. You may be asked to insert a USB for backup, follow the steps on the screen.
 19. Wait for the Chromebook to flash, do NOT use or touch the device during this process.
-20. Once it finishes without error, if you already have a Linux/Windows USB, press `enter` and then `r` and then `enter` and skip to step 22, otherwise press `ctrl+alt+🠜`, make sure you have another computer to flash a Linux/Windows USB, or login to ChromeOS to flash a Linux USB using [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) but with something OTHER than Ubuntu, I recommend [Ultramarine Linux](https://ultramarine-linux.org/).
-21. Open Quick Settings, click ⏻  and then Reboot or press `⟳+⏻ `.
+20. Once it finishes without error, if you already have a Linux/Windows USB, press `enter` and then `r` and then `enter` and skip to step 22, otherwise press `ctrl+alt+🠜` (above the 1), make sure you have another computer to flash a Linux/Windows USB, or login to ChromeOS to flash a Linux USB using [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) but with something OTHER than Ubuntu, I recommend [Ultramarine Linux](https://ultramarine-linux.org/).
+21. Open Quick Settings, click ⏻  (power) and then Reboot or press `⟳+⏻ ` (`refresh+power`).
 22. Your Chromebook can take 30 seconds to 2 minutes to load, wait until you see a bunny rabbit.
-23. Press `esc` when you see the bunny rabbit, press `🠟` and then `enter`, and then click on your USB drive.
+23. Press `esc` when you see the bunny rabbit, press `🠟` (down arrow) and then `enter`, and then click on your USB drive.
 24. Follow [Chrultrabook's guide](https://docs.chrultrabook.com/docs/installing/installing-linux.html) to install Linux or follow [Coolstar's guide](https://coolstar.org/chromebook/windows-install.html) to install Windows.
 25. Hooray!
 26. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
+If you are installing Windows, the above is already handled by the guide.
 
 ## Method 2: Easiest Method (AltFw & RW_Legacy)
-AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that aren't EOL and aren't Apollolake and older. 
+AltFw is the payload that brings Coreboot+EDK2 UEFI to Chromebooks that are Geminilake and newer. 
 RW_Legacy is the payload that brings Coreboot_SeaBIOS to Chromebooks that are Apollolake and older. 
-EOL Chromebooks do not support either. Windows is ***NOT*** supported and you ***will*** run into issues. You can get a usable experience with AltFw or RW_Legacy but it's not the best.
+EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with either. Windows is ***NOT*** supported and you ***will*** run into issues. You can get a usable experience with AltFw or RW_Legacy but it's not the best. You do not choose if you get AltFw or RW_Legacy.
 
 1. Back up all data using external media or a cloud service like Google Drive. 
 2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
-3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
+3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` (`esc+refresh+power`) and then press `ctrl+d`. You MUST be using the internal keyboard.
 4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
 5. When Chrome OS boots to "Welcome to your Chromebook", open the Quick Settings menu in the bottom right and click Wi-Fi, and connect to your Wi-Fi.
-6. Now press `ctrl+alt+🠞` (if you don't have a 🠞 key, press `ctrl+alt+⟳ ` instead).
+6. Now press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳ ` (refresh, above the 2 or 4) instead).
 7. Now type in `chronos` and press `enter`.
 8. Now type in `cd; curl -LOk https://mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh`.
 9. Look for the "Install/Update RW_LEGACY Firmware" option, this is usually option 1.
 10. Type in the number for RW_LEGACY, in my case it is 1.
 11. If you already have a Linux USB, press `enter`, then `r`, and `enter`, and skip to step 14.
-12. Otherwise, press `ctrl+alt+🠜`, make sure you have another computer to flash a Linux/Windows USB, or login to ChromeOS to flash a Linux USB using [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) but with something OTHER than Ubuntu, I recommend [Ultramarine Linux](https://ultramarine-linux.org/).
-13. Open Quick Settings, click ⏻  and then Reboot or press `⟳+⏻ `.
-14. On the OS verify screen, press `ctrl+l` (L) and then `1`, and then press `esc` when you see the bunny rabbit, press `🠟` and then `enter`, and then click on your USB drive.
+12. Otherwise, press `ctrl+alt+🠜` (above the 1), make sure you have another computer to flash a Linux/Windows USB, or login to ChromeOS to flash a Linux USB using [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) but with something OTHER than Ubuntu, I recommend [Ultramarine Linux](https://ultramarine-linux.org/).
+13. Open Quick Settings, click ⏻  (power) and then Reboot or press `⟳+⏻ ` (`refresh+power`).
+14. On the OS verify screen, press `ctrl+l` (L) and then `1`, and then press `esc` when you see the bunny rabbit, press `🠟` (down arrow) and then `enter`, and then click on your USB drive.
 15. Follow [Chrultrabook's guide](https://docs.chrultrabook.com/docs/installing/installing-linux.html) to install Linux or follow [Coolstar's guide](https://coolstar.org/chromebook/windows-install.html) to install Windows.
 16. Hooray!
 17. Bonus:
@@ -90,7 +89,7 @@ Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Goo
 6. Back up ALL data using external media or a cloud service.
 7. Enable Developer Mode by by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
 8. There might be mysterious black text in the top left corner, ignore this and press `esc+⟳+⏻ ` again and insert your Linux shim USB.
-9. On Shimboot, press `3` and then `enter`, on TerraOS, press `->` and then `enter`, and then `🠟` twice, and then `enter`.
+9. On Shimboot, press `3` and then `enter`, on TerraOS, press `->` (right arrow) and then `enter`, and then `🠟` (down arrow) twice, and then `enter`.
 10. You should be greeted with a login page. On Shimboot, put `user` as the username and password, on TerraOS put `terraos` as the username and password.
 11. On Shimboot, open a terminal with `ctrl+alt+t` and then run `sudo expand_rootfs`. TerraOS users may skip this step.
 
@@ -99,16 +98,19 @@ You are now in a Xfce enviroment on your USB drive, if you want to flash to your
 12. You can use the computer you flashed to put the Shimboot/TerraOS image onto `/home/user/` (on Shimboot) or `/home/terraos` (on TerraOS) or you can download the Linux shim image inside of Xfce.
 13. Boot back into Xfce (if you need to), open a terminal, and run `lsblk`, find the option the has mmcblk, and check if it has `0` or `1`.
 14. Now run `sudo dd if=<shim image> of=/dev/mmblk<num> bs=16M status=progress oflag=direct`, and then `sudo reboot`.
-15. Boot back into the bootloader, on Shimboot press `1` and then `enter`, on TerraOS press `->` and then `enter`.
+15. Boot back into the bootloader, on Shimboot press `1` and then `enter`, on TerraOS press `->` (right arrow) and then `enter`.
 16. Login with `user` for user/pass on Shimboot, login with `terraos` for user/pass on TerraOS.
+17. Make a new user. Open a terminal with `ctrl+alt+t` and run `sudo adduser <your username here>`, and then run `sudo adduser <username> sudo`.
+18. Press `⏻ ` (power) and then click log out. Login as your new user, open a terminal with `ctrl+alt+t`, and run `sudo deluser user` or `sudo deluser terraos`.
 
 You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.
 
-17. Bonus:
+19. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
-## Method 4: W.I.P.
+## Method 4: Libreboot (basically FullROM for two ARM Chromebooks)
+Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
 # Issues
 ## General
@@ -145,4 +147,5 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 8. No Windows support AT ALL. Even if you tried, the RMA shim runs the ***Linux kernel*** while Windows runs the ***NT kernel***, and even if you got NT in the shim, you wouldn't be able to "chroot" or whatever.
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
-##
+## Libreboot
+1. Only available on "`nyan`" and "`gru`" boards but I can only find `grunt`, `nyan-big`, `nyan-kitty`, and `nyan-blaze`? None appear to be ARM.
