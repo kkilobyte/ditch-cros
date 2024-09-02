@@ -136,6 +136,12 @@ sudo flashrom -p host -v depthcharge.rom`
 [Debian 12](https://libreboot.org/docs/uboot/uboot-debian-bookworm.html) on `gru kevin` works.
 [Debian has a DebianOn guide](https://wiki.debian.org/InstallingDebianOn/Asus/C201) for `veyron speedy`, however other RK3288 based Chromebooks should work too.
 Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
+16. 
+
+## Method 5: postmarketOS
+1. grab installer https://postmarketos.org/install/
+2. use install guide https://wiki.postmarketos.org/wiki/Installation
+3. use device guide if needed https://wiki.postmarketos.org/wiki/Devices
 
 # Issues
 ## General
@@ -182,3 +188,8 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 3. Must be unenrolled.
 4. Horrible Linux distro support.
 5. No Windows *at all* afaik.
+6. Pretty mediocore install guide (FROM Libre themselves!!!)
+7. I can't find a download.
+## postmarketOS
+1. Only on ARM Chromebooks such as `gru`, `kukai`, `oak`, `trogdor`, `veyron`, `corsola`, `cherry`, `asurada`, and `cherry`. (HOWEVER Gerneric x86-64 EFI and `Google Chromebooks with x64 CPU` builds exist and can be used with Method 1/Full ROM).
+2. Pretty mediocore install guide (FROM pmOS themselves!!!)
