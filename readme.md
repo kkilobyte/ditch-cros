@@ -109,6 +109,7 @@ You are now in a Xfce enviroment on your eMMC, congrats. Run the following to ge
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
+# UNFINISHED GUIDE
 ## Method 4: Libreboot (basically FullROM for two ARM Chromebooks)
 Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
@@ -116,12 +117,33 @@ Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreb
 2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
 3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` (`esc+refresh+power`) and then press `ctrl+d`. You MUST be using the internal keyboard.
 4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
+5. Connect to Wi-Fi from Quick Settings in the bottom right.
+6. Now press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳ ` (refresh, above the 2 or 4) instead).
+7. Enter `chronos` and then press `enter`.
+8. Run `sudo crossystem hwid`. Keep note of this.
+9. On most Libreboot-supported devices, you have the "[WP Screw](https://docs.mrchromebox.tech/docs/firmware/wp/disabling.html#removing-the-write-protection-screw)" method to disable hardware write protection. This guide assumes you have that method.
+10. Open the back of the Chromebook, disconnect the battery, and look for "`WP SCREW`". Once you find it, remove it, and power the device back on.
+11. Login to ChromeOS.
+12. 
+13. Run the following:
+`sudo flashrom -p host --wp-status
+sudo flashrom -p host --wp-disable
+sudo flashrom -p host --wp-range 0x0,0x0`
+14. Run the following:
+`cd ~/MyFiles/Downloads
+sudo flashrom -p host -r depthcharge.rom
+sudo flashrom -p host -v depthcharge.rom`
+15. Make sure you have an installation media.
+[Arch Linux ARM](https://libreboot.org/docs/uboot/uboot-archlinux.html) on `gru bob` and other RK3399 Chromebooks works.
+[Debian 12](https://libreboot.org/docs/uboot/uboot-debian-bookworm.html) on `gru kevin` works.
+[Debian has a DebianOn guide](https://wiki.debian.org/InstallingDebianOn/Asus/C201) for `veyron speedy`, however other RK3288 based Chromebooks should work too.
+Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
 
 # Issues
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
-3. No ARM support EXCEPT with method 4.
+3. No ARM support EXCEPT with method 4 and 5.
 4. Paid Windows driver, (support CoolStar anyways).
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
@@ -137,10 +159,13 @@ Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreb
 7. UEFI-only / no BIOS/CSM.
 8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
 9. Backlight is *currently* broken on AMD Cezanne devices.
+10. Menus such as the boot splash, EDK2 UEFI settings, EFI shell, or GRUB appears to be in a 4:3 aspect ratio but then stretched to 16:9.
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
 1. Broken suspend (at least on `snappy`).
 2. BIOS-only / no UEFI.
+3. Everything before GPU drivers load, such as Windows Boot Loader, Ventoy, GRUB, or verbose boot only shows in a small 800x600 box in the top left portion of the screen, at least on `snappy`.
+4. Too minimal, no TUI's, you only get a CLI to select a number that corresponds to your boot device, similar to Shimboot.
 ## Shim
 1. Relies on a leaked RMA shim - thus 90% of Chromebooks aren't supported at all.
 2. Relies on a glorified chroot.
@@ -152,5 +177,6 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 8. No Windows support AT ALL. Even if you tried, the RMA shim runs the ***Linux kernel*** while Windows runs the ***NT kernel***, and even if you got NT in the shim, you wouldn't be able to "chroot" or whatever.
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
+13. Shimboot's selector is kinda ugly and very minimal. No TUI business, just a CLI to select the number that corresponds to your boot device.
 ## Libreboot
 1. Only available on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
