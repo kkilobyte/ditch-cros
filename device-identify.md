@@ -6,11 +6,11 @@ Your Chromebook *model name* does not matter. Your Chromebook *board name* matte
 1. Login to your Chromebook.
 2. Open a new Chrome tab.
 3. Open `chrome://version`.
-4. The weird looking word at the end of `Platform:` is your board name. Examples: `octopus`, `coral`, `snappy`, `dedede`, `grunt`, `nissa`, etc.
+4. The weird looking word at the end of `Platform:`, after `stable-channel` is your board name. Examples: `octopus`, `coral`, `snappy`, `dedede`, `grunt`, `nissa`, etc.
 
 ### Method 2
 1. Press `esc+⟳+⏻ `. 
-2. The weird looking word before a random string of letters and numbers is your *code name*. Examples: `vortininja`, `phaser360`, `fleex`, `bluebird`, `snappy`, `kefka`, etc.
+2. The weird looking word before your ChromeOS version is your *code name*. Examples: `vortininja`, `phaser360`, `fleex`, `bluebird`, `snappy`, `kefka`, etc.
 3. Open [cros.tech](https://cros.tech) on another device, and type in that code name.
 4. It should show your *board name* to the left of your *code name* and *model name*.
 
@@ -22,7 +22,7 @@ Your Chromebook *model name* does not matter. Your Chromebook *board name* matte
 
 ### Method 2
 1. Press `esc+⟳+⏻ `. 
-2. The weird looking word before a random string of letters and numbers is your *code name*.
+2. The weird looking word before your ChromeOS version is your *code name*.
 
 ## Model name
 ### Method 1

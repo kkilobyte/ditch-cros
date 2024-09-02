@@ -21,19 +21,25 @@ On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to sc
 `set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'`
 
 5. Press enter.
-6. Press `esc+⟳+⏻ ` (`esc+refresh+power`).
-7. Press `ctrl+d` and then `enter`.
-8. On the scary screen with black text at the top left, press `enter` again.
-9. Wait for ChromeOS to boot, and then go through the setup.
-10. It should ask you to sign in with a personal account.
-11. Enjoy!
+6. Back up all data to an external media (like a USB flash drive) or a cloud service (like Google Drive).
+7. Press `esc+⟳+⏻ ` (`esc+refresh+power`).
+8. Press `ctrl+d` and then `enter`.
+9. On the scary screen with black text at the top left, press `enter` again.
+10. Wait for ChromeOS to boot, and then go through the setup.
+11. It should ask you to sign in with a personal account.
+12. Enjoy!
 
 # This guide below is UNFINISHED!!!
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
 
-1. sh1mmer steps here (flash > boot > press d > reboot)
+1. Back up all data to external media or cloud service.
+2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux won't work with this.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
+3. [Identify](/device-identify.md) what Chromebook *board* you have.
+4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
+5. Open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
+<img src="/img/tutorial/chrome-recovery-extension.png">
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
