@@ -38,8 +38,15 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux won't work with this.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
 3. [Identify](/device-identify.md) what Chromebook *board* you have.
 4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
-5. Open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
+5. Open your "Downloads" folder in the "Files" app, double click on the SH1mmer zip file, and drag the SH1mmer bin file to your Downloads folder.
+6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
 <img src="/img/tutorial/chrome-recovery-extension.png">
+7. Click on the gear icon in the corner and click "Use local image" and the select your SH1mmer bin file.
+<img src="/img/tutorial/cru-local-image.png">
+8. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
+9. Verify this USB drive doesn't have important data and then wait for it to flash.
+10. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
+11. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options, press `d` and then `enter`, this should come with two messages saying "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use Full ROM or AltFw!
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
