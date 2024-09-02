@@ -21,7 +21,7 @@ The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but c
 
 1. Backup ALL data using external media or a cloud service.
 2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
-3. Enter developer mode by pressing `esc+⟳+⏻ ` and then press `ctrl+d`. You MUST be using the internal keyboard.
+3. Enter developer mode by pressing `esc+⟳+⏻ ` (`esc+refresh+power`) and then press `ctrl+d`. You MUST be using the internal keyboard.
 4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
 5. When Chrome OS boots to "Welcome to your Chromebook", open the Quick Settings menu in the bottom right and click Wi-Fi, and connect to your Wi-Fi.
 6. Go back to Quick Settings, and click `⏻ `, if a menu shows up, click "Shut down".
