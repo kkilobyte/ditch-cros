@@ -17,13 +17,14 @@ On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to sc
 1. Login to your Chromebook.
 2. Open Crosh with `ctrl+alt+t`. If it says `crosh is blocked`, use SH1mmer.
 3. Paste the following in:
+
 `set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'`
-4. Press enter.
-5. Press `esc+⟳+⏻ ` (`esc+refresh+power`).
-6. Press `ctrl+d` and then `enter`.
-7. On the scary screen with black text at the top left, press `enter` again.
-8. Wait for ChromeOS to boot, and then go through the setup.
-9. It should ask you to sign in with a personal account, congrats.         
+5. Press enter.
+6. Press `esc+⟳+⏻ ` (`esc+refresh+power`).
+7. Press `ctrl+d` and then `enter`.
+8. On the scary screen with black text at the top left, press `enter` again.
+9. Wait for ChromeOS to boot, and then go through the setup.
+10. It should ask you to sign in with a personal account, congrats.         
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
