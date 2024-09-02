@@ -51,7 +51,7 @@ I do not have permission to give out information about icarus.
 # Kernver Info
 
 ## Kernver 0 and 1
-These versions are basically the same. You have full access to any ChromeOS version (unless you update your kernver). If you are on kv1 but are on ChromeOS v111, or v120 and above, you can downgrade to ChromeOS v105 to use SH1mmer deprovision, if you are on ChromeOS v118 or below, just use CryptoSmite, it's already included in SH1mmer payloads.
+These versions are basically the same. You have full access to any ChromeOS version (unless you update your kernver). If you are on kernver 1 but on ChromeOS v119 and above, you can downgrade to ChromeOS v105 to use SH1mmer deprovision, if you are on ChromeOS v118 or below, just use CryptoSmite, it's already included in SH1mmer payloads.
 
 ## Kernver 2
 You have full access to ChromeOS v112 and above, if you are on ChromeOS v119 or above, you can downgrade to ChromeOS v112 to use Cryptosmite.
