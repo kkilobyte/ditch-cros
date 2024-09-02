@@ -40,9 +40,12 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
 5. Open your "Downloads" folder in the "Files" app, double click on the SH1mmer zip file, and drag the SH1mmer bin file to your Downloads folder.
 6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
+
 <img src="/img/tutorial/chrome-recovery-extension.png">
 7. Click on the gear icon in the corner and click "Use local image" and the select your SH1mmer bin file.
+
 <img src="/img/tutorial/cru-local-image.png">
+
 8. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 9. Verify this USB drive doesn't have important data and then wait for it to flash.
 10. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
