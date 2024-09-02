@@ -26,7 +26,9 @@ On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to sc
 8. On the scary screen with black text at the top left, press `enter` again.
 9. Wait for ChromeOS to boot, and then go through the setup.
 10. It should ask you to sign in with a personal account.
-11. Enjoy      
+11. Enjoy!
+
+# This guide below is UNFINISHED!!!
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
