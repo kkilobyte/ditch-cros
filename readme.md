@@ -75,9 +75,7 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 3: Shim
-WIP GUIDE!!!!
-
-Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as weird as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
+Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as decent as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
 
 1. Decide on rather you want Shimboot (Debian) or TerraOS (Arch). Shimboot is better maintained and TerraOS's systemd is outdated.
 2. Figure out your [device board](/device-identify.md#board-name).
