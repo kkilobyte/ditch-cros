@@ -112,6 +112,11 @@ You are now in a Xfce enviroment on your eMMC, congrats. Run the following to ge
 ## Method 4: Libreboot (basically FullROM for two ARM Chromebooks)
 Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
+1. Back up all data using a cloud service or external media.
+2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
+3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` (`esc+refresh+power`) and then press `ctrl+d`. You MUST be using the internal keyboard.
+4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
+
 # Issues
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
@@ -148,4 +153,4 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
 ## Libreboot
-1. Only available on "`nyan`" and "`gru`" boards but I can only find `grunt`, `nyan-big`, `nyan-kitty`, and `nyan-blaze`? None appear to be ARM.
+1. Only available on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
