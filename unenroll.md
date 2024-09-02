@@ -50,9 +50,9 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
 11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
 12. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options.
-<img src="/img/tutorial/sh1mmer-legacy.jpg" width="200">
+<img src="/img/tutorial/sh1mmer-legacy.jpg" width="400">
 
-13. Press `d` and then `enter`, this should come with two messages saying "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+13. Press `d` and then `enter`, this should come with two messages both having "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
