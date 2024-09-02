@@ -180,3 +180,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 13. Shimboot's selector is kinda ugly and very minimal. No TUI business, just a CLI to select the number that corresponds to your boot device.
 ## Libreboot
 1. Only available on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
+2. Requires WP to be OFF.
+3. Must be unenrolled.
+4. Horrible Linux distro support.
+5. No Windows *at all* afaik.
