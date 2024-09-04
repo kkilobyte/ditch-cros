@@ -91,19 +91,21 @@ Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Goo
 10. You should be greeted with a login page. On Shimboot, put `user` as the username and password, on TerraOS put `terraos` as the username and password.
 11. On Shimboot, open a terminal with `ctrl+alt+t` and then run `sudo expand_rootfs`. TerraOS users may skip this step.
 
-You are now in a Xfce enviroment on your USB drive, if you want to flash to your eMMC/internal storage and replace chromeOS, continue with steps 12 to 16, otherwise skip to 17.
+### You are now in a Xfce enviroment on your USB drive, if you want to flash to your eMMC/internal storage and replace chromeOS, continue with steps 12 to 16, otherwise skip to 17.
 
 12. You can use the computer you flashed to put the Shimboot/TerraOS image onto `/home/user/` (on Shimboot) or `/home/terraos` (on TerraOS) or you can download the Linux shim image inside of Xfce.
 13. Boot back into Xfce (if you need to), open a terminal, and run `lsblk`, find the option the has mmcblk, and check if it has `0` or `1`.
 14. Now run `sudo dd if=<shim image> of=/dev/mmblk<num> bs=16M status=progress oflag=direct`, and then `sudo reboot`.
-15. Boot back into the bootloader, on Shimboot press `1` and then `enter`, on TerraOS press `->` (right arrow) and then `enter`.
-16. Login with `user` for user/pass on Shimboot, login with `terraos` for user/pass on TerraOS.
-17. Make a new user. Open a terminal with `ctrl+alt+t` and run `sudo adduser <your username here>`, and then run `sudo adduser <username> sudo`.
-18. Press `⏻ ` (power) and then click log out. Login as your new user, open a terminal with `ctrl+alt+t`, and run `sudo deluser user` or `sudo deluser terraos`.
+15. Repeat step 5 on TerraOS but with your `mmcblk<num>` instead of `<usb>`.
+16. Boot back into the bootloader, on Shimboot press `1` and then `enter`, on TerraOS press `->` (right arrow) and then `enter`.
+17. Login with `user` for user/pass on Shimboot, login with `terraos` for user/pass on TerraOS.
+18. On Shimboot, repeat step 11.
+19. Make a new user. Open a terminal with `ctrl+alt+t` and run `sudo adduser <your username here>`, and then run `sudo adduser <username> sudo`.
+20. Press `⏻ ` (power) and then click log out. Login as your new user, open a terminal with `ctrl+alt+t`, and run `sudo deluser user` or `sudo deluser terraos`.
 
-You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.
+### You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.
 
-19. Bonus:
+21. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
