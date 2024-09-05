@@ -150,7 +150,7 @@ Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chrome
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
 3. No ARM support EXCEPT with method 4 and 5.
-4. Paid Windows driver, (support CoolStar anyways).
+4. Paid Windows audio driver, (on non-EOL and non-Stoneyridge Chromebooks, support CoolStar anyways).
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
 2. Requires WP to be OFF
@@ -185,7 +185,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
 13. Shimboot's selector is kinda ugly and very minimal. No TUI business, just a CLI to select the number that corresponds to your boot device.
 ## Libreboot
-1. Only available on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
+1. Only supported on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
 2. Requires WP to be OFF.
 3. Must be unenrolled.
 4. Horrible Linux distro support.
