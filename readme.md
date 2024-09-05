@@ -74,10 +74,16 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
-## Method 3: Shim
+# UNFINISHED GUIDE
+## Method 3: Submarine
+1. Back up all data using external media or a cloud service like Google Drive. 
+2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
+
+
+## Method 4: Shim
 Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as decent as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
 
-1. Decide on rather you want Shimboot (Debian) or TerraOS (Arch). Shimboot is better maintained and TerraOS's systemd is outdated.
+1. Decide on rather you want Shimboot (Debian) or TerraOS (Arch). Shimboot is better maintained and TerraOS's systemd is outdated, and Shimboot is known to work better on ARM (`jacuzzi`) Chromebooks.
 2. Figure out your [device board](/device-identify.md#board-name).
 3. If you want Shimboot, get the latest build for your board from [ading2210/shimboot/releases](https://github.com/ading2210/shimboot/releases) or [dl.darkn.bio/shimboot](https://dl.darkn.bio/Shimboot). If you want you TerraOS, get the latest build for your board from [files.mercurywork.shop/r58playz/terraos/arch-images/](http://files.mercurywork.shop/r58playz/terraos/arch-images/).
 3a. If your board does not show, you will have to manually build using a personal device. [/r58playz/terraos](https://github.com/r58playz/terraos) | [/ading2210/shimboot](https://github.com/ading2210/shimboot)
@@ -110,7 +116,8 @@ Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Goo
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 # UNFINISHED GUIDE
-## Method 4: Libreboot (basically FullROM for two ARM Chromebooks)
+
+## Method 5: Libreboot (basically FullROM for two ARM Chromebooks)
 Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
 1. Back up all data using a cloud service or external media.
@@ -140,16 +147,11 @@ sudo flashrom -p host -v depthcharge.rom`
 Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
 16. 
 
-## Method 5: postmarketOS
-1. grab installer https://postmarketos.org/install/
-2. use install guide https://wiki.postmarketos.org/wiki/Installation
-3. use device guide if needed https://wiki.postmarketos.org/wiki/Devices
-
 # Issues
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
-3. No ARM support EXCEPT with method 4 and 5.
+3. No ARM support EXCEPT with Submarine, Shimboot, and Libreboot
 4. Paid Windows audio driver, (on non-EOL and non-Stoneyridge Chromebooks, support CoolStar anyways).
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
@@ -172,6 +174,8 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 2. BIOS-only / no UEFI.
 3. Everything before GPU drivers load, such as Windows Boot Loader, Ventoy, GRUB, or verbose boot only shows in a small 800x600 box in the top left portion of the screen, at least on `snappy`.
 4. Too minimal, no TUI's, you only get a CLI to select a number that corresponds to your boot device, similar to Shimboot.
+## Submarine
+1. Requires an unenrolled device.
 ## Shim
 1. Relies on a leaked RMA shim - thus 90% of Chromebooks aren't supported at all.
 2. Relies on a glorified chroot.
@@ -184,6 +188,8 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
 13. Shimboot's selector is kinda ugly and very minimal. No TUI business, just a CLI to select the number that corresponds to your boot device.
+14. Updating Arch in TerraOS using `pacman -Syu` will cause Arch to break. A workaround is to use `yay -Syu` or `paru -Syu` instead. 
+15. You will have to manually wait for systemd to compile for Arch from the AUR on TerraOS.
 ## Libreboot
 1. Only supported on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
 2. Requires WP to be OFF.
@@ -192,6 +198,3 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 5. No Windows *at all* afaik.
 6. Pretty mediocore install guide (FROM Libre themselves!!!)
 7. I can't find a download.
-## postmarketOS
-1. Only on ARM Chromebooks such as `gru`, `kukai`, `oak`, `trogdor`, `veyron`, `corsola`, `cherry`, `asurada`, and `cherry`. (HOWEVER Gerneric x86-64 EFI and `Google Chromebooks with x64 CPU` builds exist and can be used with Method 1/Full ROM).
-2. Pretty mediocore install guide (FROM pmOS themselves!!!)
