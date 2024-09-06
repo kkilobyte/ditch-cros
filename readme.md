@@ -194,7 +194,7 @@ Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreb
 9. On most Libreboot-supported devices, you have the "[WP Screw](https://docs.mrchromebox.tech/docs/firmware/wp/disabling.html#removing-the-write-protection-screw)" method to disable hardware write protection. This guide assumes you have that method.
 10. Open the back of the Chromebook, disconnect the battery, and look for "`WP SCREW`". Once you find it, remove it, and power the device back on.
 11. Login to ChromeOS.
-12. 
+12. Now press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳ ` (refresh, above the 2 or 4) instead).
 13. Run the following:
 `sudo flashrom -p host --wp-status
 sudo flashrom -p host --wp-disable
@@ -208,7 +208,8 @@ sudo flashrom -p host -v depthcharge.rom`
 [Debian 12](https://libreboot.org/docs/uboot/uboot-debian-bookworm.html) on `gru kevin` works.
 [Debian has a DebianOn guide](https://wiki.debian.org/InstallingDebianOn/Asus/C201) for `veyron speedy`, however other RK3288 based Chromebooks should work too.
 Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
-16. 
+16. Back up `depthcharge.rom` to a cloud service or external media.
+17. 
 
 # Issues
 ## General
@@ -229,8 +230,8 @@ Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chrome
 6. Not available for EOL devices.
 7. UEFI-only / no BIOS/CSM.
 8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
-9. Backlight is *currently* broken on AMD Cezanne devices.
-10. Menus such as the boot splash, EDK2 UEFI settings, EFI shell, or GRUB appears to be in a 4:3 aspect ratio but then stretched to 16:9.
+9. Backlight is broken on AMD Cezanne devices.
+10. Menus such as the boot splash, EDK2 UEFI settings, EFI shell, or GRUB are stretched and look kinda weird.
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
 1. Broken suspend (at least on `snappy`).
@@ -242,6 +243,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 2. No Windows *at all*.
 3. Screen doesn't initialize on some MT8192 Chromebooks.
 4. Touchscreen might not work for some.
+5. Requires key combo on boot (if you use the Ctrl+U method).
 ## Shim
 1. Relies on a leaked RMA shim - thus 90% of Chromebooks aren't supported at all.
 2. Relies on a glorified chroot.
