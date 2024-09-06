@@ -48,9 +48,9 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 | ----- |
 | Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM |
 
-| <img src="/img/poc/hatch-shimboot-debian12-xfce.jpg" alt="Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot" width="500"/> |
-| ----- |
-| Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot |
+| <img src="/img/poc/hatch-shimboot-debian12-xfce.jpg" alt="Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot" width="400"/> | <img src="/img/poc/drawcia-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a HP Chromebook 11 G9 EE (drawcia) using Shimboot" width="400">
+| ----- | ----- |
+| Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot | Debian 12 Gnome on a HP Chromebook 11 G9 EE (drawcia) using Shimboot |
 
 # How?
 ## Method 1: Best Method (FullROM)
