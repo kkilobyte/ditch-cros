@@ -4,15 +4,13 @@
   * [Why remove ChromeOS?](#why-remove-chromeos-)
   * [Picture Evidence](#picture-evidence)
 - [How?](#how-)
-  * [Method 1: Best Method (FullROM)](#method-1--best-method--fullrom-)
-  * [Method 2: Easiest Method (AltFw & RW_Legacy)](#method-2--easiest-method--altfw---rw-legacy-)
+  * [Method 1: FullROM](#method-1--best-method--fullrom-)
+  * [Method 2: AltFw & RW_Legacy](#method-2--easiest-method--altfw---rw-legacy-)
   * [Method 3: Submarine](#method-3--submarine)
     + [Using a USB drive or SD card](#using-a-usb-drive-or-sd-card)
     + [Using internal storage](#using-internal-storage)
   * [Method 4: Shim](#method-4--shim)
-    + [You are now in a Xfce enviroment on your USB drive, if you want to flash to your eMMC/internal storage and replace chromeOS, continue with steps 12 to 16, otherwise skip to 17.](#you-are-now-in-a-xfce-enviroment-on-your-usb-drive--if-you-want-to-flash-to-your-emmc-internal-storage-and-replace-chromeos--continue-with-steps-12-to-16--otherwise-skip-to-17)
-    + [You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.](#you-are-now-in-a-xfce-enviroment-on-your-emmc--congrats-run-the-following-to-get-a-proper-experience)
-  * [Method 5: Libreboot (basically FullROM for two ARM Chromebooks)](#method-5--libreboot--basically-fullrom-for-two-arm-chromebooks-)
+  * [Method 5: Libreboot](#method-5--libreboot--basically-fullrom-for-two-arm-boards-)
 - [Issues](#issues)
   * [General](#general)
   * [Full ROM](#full-rom)
@@ -165,7 +163,7 @@ Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Goo
 
 # UNFINISHED GUIDE
 
-## Method 5: Libreboot (basically FullROM for two ARM Chromebooks)
+## Method 5: Libreboot (basically FullROM for two ARM boards)
 Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
 1. Back up all data using a cloud service or external media.
