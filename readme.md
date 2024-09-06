@@ -1,7 +1,9 @@
 # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
 ## Table of Contents
 - [kkilobyte/ditch-cros](#kkilobyte-ditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
+  * [DISCLAIMER!!!](#disclaimer---)
   * [Why remove ChromeOS?](#why-remove-chromeos-)
+  * [Why make this guide?](#why-make-this-guide-)
   * [Picture Evidence](#picture-evidence)
 - [How?](#how-)
   * [Method 1: FullROM](#method-1--best-method--fullrom-)
@@ -22,6 +24,11 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+## DISCLAIMER!!!
+I am ***NOT*** responsible for any damage to devices or if you brick a device, and I'm also ***NOT*** responsible if you get in trouble for unenrollment or theft.
+Theft ***IS A CRIME***, I do not encourage it at all, and I mention unenrollment ***ONLY*** for documentation and educational purposes.
+### Theft can be prosecuted as either a misdemeanor or a felony under US law.
+
 ## Why remove ChromeOS?
 Well for starters, Chrome OS is a horrible operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. 
 
@@ -29,12 +36,19 @@ The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to dis
 
 Overall it's unoptimized and difficult to use. It's very limiting for powerusers (and sometimes normies) and you are better off using literally anything else. 
 
+## Why make this guide?
+There isn't a list of ways to run different operating systems on Chromebooks like here, and most people are unaware of methods like Shimboot or Submarine, and only know of the traditional Full ROM and RW_Legacy, and most people go into public Discords asking for someone to hold their hand as they install a better OS.
+
 ## Picture Evidence
 | <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
 | ----- | ----- |
 | Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot |
 
 | <img src="/img/poc/vortininja-and-fleex-fullrom-arch-kde.jpg" alt="Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM" width="500"/> |
+| ----- |
+| Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM |
+
+| <img src="/img/poc/hatch-shimboot-debian12-xfce.jpg" alt="Debian 12 XFCE on a Lenovo Chromebook (hatch) using Shimboot" width="500"/> |
 | ----- |
 | Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM |
 
@@ -97,7 +111,6 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
-# UNFINISHED GUIDE
 ## Method 3: Submarine
 1. Back up all data using external media or a cloud service like Google Drive. 
 2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business or enterprise device, FWMP should already be disabled. 
@@ -115,14 +128,18 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 13. Take out your USB drive, run `sudo reboot` or press `⟳+⏻ `, plug in the device you flashed in on the white screen and press Ctrl+U.
 14. If all goes well, you should soon see the Submarine boot menu.
 15. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
+16. Hooray!
+17. Bonus:
+- Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
+- Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ### Using internal storage
 10. Start by creating a 16 MB EXT4 partition using your favorite partitioning tool.
 11. Run `cgpt add -i <partition number> -t kernel -P 15 -T 1 -S 1 /dev/mmcblk0`
 12. Run `cd; sudo dd if=MyFiles/Downloads/submarine-<arch>.kpart of=/dev/mmcblk0p<partition> bs=16M status=progress oflag=direct`.
 13. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
-16. Hooray!
-17. Bonus:
+14. Hooray!
+15. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
 - Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
