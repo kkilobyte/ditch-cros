@@ -1,10 +1,35 @@
 # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
-## Why?
-Well for starters, Chrome OS is a bad operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. 
+## Table of Contents
+- [kkilobyte/ditch-cros](#kkilobyte-ditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
+  * [Why remove ChromeOS?](#why-remove-chromeos-)
+  * [Picture Evidence](#picture-evidence)
+- [How?](#how-)
+  * [Method 1: Best Method (FullROM)](#method-1--best-method--fullrom-)
+  * [Method 2: Easiest Method (AltFw & RW_Legacy)](#method-2--easiest-method--altfw---rw-legacy-)
+  * [Method 3: Submarine](#method-3--submarine)
+    + [Using a USB drive or SD card](#using-a-usb-drive-or-sd-card)
+    + [Using internal storage](#using-internal-storage)
+  * [Method 4: Shim](#method-4--shim)
+    + [You are now in a Xfce enviroment on your USB drive, if you want to flash to your eMMC/internal storage and replace chromeOS, continue with steps 12 to 16, otherwise skip to 17.](#you-are-now-in-a-xfce-enviroment-on-your-usb-drive--if-you-want-to-flash-to-your-emmc-internal-storage-and-replace-chromeos--continue-with-steps-12-to-16--otherwise-skip-to-17)
+    + [You are now in a Xfce enviroment on your eMMC, congrats. Run the following to get a proper experience.](#you-are-now-in-a-xfce-enviroment-on-your-emmc--congrats-run-the-following-to-get-a-proper-experience)
+  * [Method 5: Libreboot (basically FullROM for two ARM Chromebooks)](#method-5--libreboot--basically-fullrom-for-two-arm-chromebooks-)
+- [Issues](#issues)
+  * [General](#general)
+  * [Full ROM](#full-rom)
+  * [AltFw](#altfw)
+  * [RW_Legacy](#rw-legacy)
+  * [Submarine](#submarine)
+  * [Shim](#shim)
+  * [Libreboot](#libreboot)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+## Why remove ChromeOS?
+Well for starters, Chrome OS is a horrible operating system, since Google wants to push AI and push virtualizing everything from Android apps and Linux programs in a VM. 
 
 The only "usable" configuration for Chrome OS on 4 GB Celeron machines is to disable "Play Store" in the Settings, (aka Android or ArcVM), and make sure the Linux developer enviroment (aka Debian or Crostini) is also disabled, but that only leaves you with a web browser unless you enable Developer Mode which adds a 30 second wait with a beep and use Chromebrew, which is kind of a pain in the ass and slow, along with taking up a lot of extra storage.
 
-Overall it's unoptimized as fuck and it's difficult to use. It's very limiting and you are better off using literally anything else.
+Overall it's unoptimized and difficult to use. It's very limiting for powerusers (and sometimes normies) and you are better off using literally anything else. 
 
 ## Picture Evidence
 | <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
@@ -77,8 +102,31 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 # UNFINISHED GUIDE
 ## Method 3: Submarine
 1. Back up all data using external media or a cloud service like Google Drive. 
-2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business device, FWMP should already be disabled.
+2. Make sure FWMP is disabled and you are unenrolled. If you are enrolled, you can use [the unenrollment guide](/unenroll.md). If you are not using a business or enterprise device, FWMP should already be disabled. 
+3. Enable Developer Mode by by pressing `esc+⟳+⏻ ` (`esc+refresh+power`) and then press `ctrl+d`. You MUST be using the internal keyboard.
+4. When your Chromebook says "OS Verification is turned off", press `ctrl+d` again.
+5. When Chrome OS boots to "Welcome to your Chromebook", open the Quick Settings menu in the bottom right and click Wi-Fi, and connect to your Wi-Fi.
+6. Continue with ChromeOS setup and login.
+7. Press `ctrl+🔍+esc` and look at CPU, if it says AMD or Intel, download [this](https://nightly.link/FyraLabs/submarine/workflows/build/main/submarine-x86_64.zip), if it says Rockchip, Samsung Exynos, MediaTek, download [this instead](https://nightly.link/FyraLabs/submarine/workflows/build/main/submarine-arm64.zip), and extract the file you downloaded to `My Files/Downloads`
+8. Now press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳ ` (refresh, above the 2 or 4) instead).
+9. Type in `chronos` and press enter, and then run `sudo enable_dev_usb_boot`.
 
+### Using a USB drive or SD card
+10. Plug in your external storage device (without the data you backed up) and run `sudo lsblk` and look for your drive.
+12. Run `cd; sudo dd if=MyFiles/Downloads/submarine-<arch>.kpart of=/dev/<storage device> bs=16M status=progress oflag=direct`.
+13. Take out your USB drive, run `sudo reboot` or press `⟳+⏻ `, plug in the device you flashed in on the white screen and press Ctrl+U.
+14. If all goes well, you should soon see the Submarine boot menu.
+15. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
+
+### Using internal storage
+10. Start by creating a 16 MB EXT4 partition using your favorite partitioning tool.
+11. Run `cgpt add -i <partition number> -t kernel -P 15 -T 1 -S 1 /dev/mmcblk0`
+12. Run `cd; sudo dd if=MyFiles/Downloads/submarine-<arch>.kpart of=/dev/mmcblk0p<partition> bs=16M status=progress oflag=direct`.
+13. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
+16. Hooray!
+17. Bonus:
+- Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
+- Linux keymaps: [weirdtreething/cros-keyboard-map](https://github.com/weirdtreething/cros-keyboard-map)
 
 ## Method 4: Shim
 Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Google ships on all Chromebooks, however it doesn't run as decent as ChromeOS. For starters, Developer mode must be on (however it does not matter if FWMP is on), and you must boot into recovery mode (the same screen that you use to reinstall ChromeOS). All thanks to a tool for repair shops and schools.
@@ -176,6 +224,9 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 4. Too minimal, no TUI's, you only get a CLI to select a number that corresponds to your boot device, similar to Shimboot.
 ## Submarine
 1. Requires an unenrolled device.
+2. No Windows *at all*.
+3. Screen doesn't initialize on some MT8192 Chromebooks.
+4. Touchscreen might not work for some.
 ## Shim
 1. Relies on a leaked RMA shim - thus 90% of Chromebooks aren't supported at all.
 2. Relies on a glorified chroot.
@@ -184,7 +235,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 5. Broken GPU acceleration half the time. (For example: X11 on my `meep`, `cret`, `phaser360`, and `fleex`, or Gnome Wayland.)
 6. Requires a key combo and a few key inputs to boot.
 7. Requires manual building for Linux distros that are not Debian 12 Stable (in Shimboot) or Chrome OS Flex v109 and Arch Linux (in TerraOS).
-8. No Windows support AT ALL. Even if you tried, the RMA shim runs the ***Linux kernel*** while Windows runs the ***NT kernel***, and even if you got NT in the shim, you wouldn't be able to "chroot" or whatever.
+8. No Windows *at all*.
 11. `grunt` Chromebooks on X11 has a weird screen drawing issue where you have to constantly switch in and out of a TTY to render every single new frame.
 12. On newui boards like `dedede` and `nissa`, they will have their *shim keys rolled*, meaning all the old shims with old keys will never boot, and the new shims with new keys now have rootfs verification, meaning shim-based Linux enviroments like TerraOS and Shimboot will *NOT* work unless the verification is bypassed and new shims are found.
 13. Shimboot's selector is kinda ugly and very minimal. No TUI business, just a CLI to select the number that corresponds to your boot device.
