@@ -64,6 +64,8 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 | ----- |
 | Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM |
 
+(credits to error404/null/symlink, kelsea/crossystem, kxtzownsu/katelyn, and vk6/ading2210 because i stole half of these from them)
+
 # How?
 ## Method 1: Best Method (FullROM)
 The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but comes with some issues like not being able to use Chrome OS at all unless the stock firmware is restored, and is the only way to run Windows with proper drivers. The follow guide is for Cr50 Chromebooks with the "Cr50 (Battery)" WP method, use [MrChromebox's device table](https://docs.mrchromebox.tech/docs/supported-devices.html) to find your WP method.
