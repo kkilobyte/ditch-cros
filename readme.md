@@ -14,7 +14,7 @@
   * [Method 4: Shim](#method-4--shim)
   * [Method 5: Libreboot](#method-5--libreboot--basically-fullrom-for-two-arm-boards-)
 - [Issues](#issues)
-  * [NOTICE!](#notice-)
+  * [NOTICE!](#notice)
   * [General](#general)
   * [Full ROM](#full-rom)
   * [AltFw](#altfw)
