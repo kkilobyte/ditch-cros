@@ -14,6 +14,7 @@
   * [Method 4: Shim](#method-4--shim)
   * [Method 5: Libreboot](#method-5--libreboot--basically-fullrom-for-two-arm-boards-)
 - [Issues](#issues)
+  * [NOTICE!](#notice-)
   * [General](#general)
   * [Full ROM](#full-rom)
   * [AltFw](#altfw)
@@ -228,7 +229,6 @@ Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chrome
 # Issues
 ## NOTICE!
 General hardware issues like the numerous hardware bugs `celes` have or the very poor quality control of `kohaku` like the deteriorating trackpad grounding or the faulty backlight circuit, still apply REGARDLESS the firmware. This will persist from either ChromeOS or Linux or Windows or WHATEVER. Do not blame hardware bugs on the custom firmware.
-
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
