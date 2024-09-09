@@ -57,7 +57,37 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
 
-1. cryptosmite steps here (flash > boot > press p > cryptosmite > connect wifi > enable devmode)
+1. Back up all data to external media or cloud service.
+2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux won't work with this.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
+3. [Identify](/device-identify.md) what Chromebook *board* you have.
+4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
+5. Open your "Downloads" folder in the "Files" app, double click on the SH1mmer zip file, and drag the SH1mmer bin file to your Downloads folder.
+6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
+
+<img src="/img/tutorial/chrome-recovery-extension.png">
+7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your SH1mmer bin file.
+<img src="/img/tutorial/cru-local-image.png">
+
+8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+9. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
+10. Verify this USB drive doesn't have important data and then wait for it to flash.
+11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
+12. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options.
+<img src="/img/tutorial/sh1mmer.jpg" width="400">
+
+13. Press `p` and then select "Cryptosmite" with the arrow keys.
+14. Wait for ChromeOS to reboot.
+15. Connect to internet.
+16. Press `esc+⟳+⏻ ` and then `ctrl+d`.
+17. Press `esc+⟳+⏻ ` again but this time press `h` for `Touch .developer_mode` and then `⟳+⏻ `, on the OS verification screen press `ctrl+d`
+18. Wait for ChromeOS to boot.
+19. QUICKLY!!! press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳` (refresh, above the 2 or 4) instead).
+20. Now type in `root` and press `enter`.
+21. Run `vpd -i RW_VPD -s check_enrollment=0`
+22. Now run `cryptohome --action=remove_firmware_management_parameters`
+23. Press `ctrl+alt+🠜` (above the 1), and setup ChromeOS as normal.
+24. If you see `Enterprise enrollment`, quickly boot into SH1mmer, open bash, and run `mkfs.ext4 /dev/mmcblk*p1`, and repeat 13 to 23 again. 
+25. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 
 ## UNRELEASED!!: ChromeOS v124 and below - OlyBmmer
 The preferred unenrollment method for ChromeOS v124 and below is using OlyBmmer. I do not have information about OlyBmmer other than it does *not* require an RMA shim unlike the other unenrollment exploits.
