@@ -52,7 +52,11 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 12. Wait for SH1mmer to load, once you are greeted with a scary menu with lots of options.
 <img src="/img/tutorial/sh1mmer.jpg" width="400">
 
-13. Press `d` and then `enter`, this should come with two messages both having "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power) and you should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+13. Press `d` and then `enter`, this should come with two messages both having "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power).
+14. You should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. 
+15. Setup ChromeOS as normal
+16. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+<img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
@@ -88,6 +92,7 @@ The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's
 23. Press `ctrl+alt+🠜` (above the 1), and setup ChromeOS as normal.
 24. If you see `Enterprise enrollment`, quickly boot into SH1mmer, open bash, and run `mkfs.ext4 /dev/mmcblk*p1`, and repeat 13 to 23 again. 
 25. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+<img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 ## UNRELEASED!!: ChromeOS v124 and below - OlyBmmer
 The preferred unenrollment method for ChromeOS v124 and below is using OlyBmmer. I do not have information about OlyBmmer other than it does *not* require an RMA shim unlike the other unenrollment exploits.
@@ -98,6 +103,9 @@ The preferred unenrollment method for ChromeOS v124 and below is using OlyBmmer.
 I do not have permission to give out information about icarus.
 
 1. use a proxy or shimboot
+
+## UNRELEASED!!: Crsh2tty - teaser
+<img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 # Kernver Info
 

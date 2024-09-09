@@ -56,9 +56,13 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 | ----- | ----- |
 | Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (vortininja) using Full ROM | Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (meep) using Full ROM |
 
-| <img src="/img/poc/fleex-shimboot-void-dwm.jpg" alt="Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot" width="500"/> |
+| <img src="/img/poc/fleex-shimboot-void-dwm.jpg" alt="Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot" width="500"/> | <img src="/img/poc/barla-fullrom-bootscreen.jpg" alt="HP bootup logo on a modified HP Chromebook 11A G6 EE (barla) using Full ROM" width="500">
+| ----- | ----- | 
+| Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot | HP bootup logo on a modified HP Chromebook 11A G6 EE (barla) using Full ROM | 
+
+| <img src="/img/poc/craaskbowl-fullrom-bootscreen.jpg" alt="Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM" width="500"/> |
 | ----- |
-| Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot |
+| Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM |
 
 # How?
 ## Method 1: Best Method (FullROM)
