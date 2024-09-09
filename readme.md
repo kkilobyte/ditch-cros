@@ -232,6 +232,7 @@ Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chrome
 3. No ARM support EXCEPT with Submarine, Shimboot, and Libreboot
 4. Paid Windows audio driver, (on non-EOL and non-Stoneyridge Chromebooks, support CoolStar anyways).
 5. Sometimes the Chromebook will turn itself back on (like when the charger is plugged in or taken out) in BOTH Linux and Windows.
+6. General hardware bugs such as on `celes` or ``
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
 2. Requires WP to be OFF
