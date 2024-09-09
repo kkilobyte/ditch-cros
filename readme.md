@@ -52,6 +52,14 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 | ----- | ----- |
 | Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot | Debian 12 Gnome on a HP Chromebook 11 G9 EE (drawcia) using Shimboot |
 
+| <img src="/img/poc/vortininja-fullrom-ultramarine-kde.jpg" alt="Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (vortininja) using Full ROM" width="400"/> | <img src="/img/poc/meep-fullrom-bootscreen.jpg" alt="Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (meep) using Full ROM" width="400">
+| ----- | ----- |
+| Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (vortininja) using Full ROM | Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (meep) using Full ROM |
+
+| <img src="/img/poc/fleex-shimboot-void-dwm.jpg" alt="Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot" width="500"/> |
+| ----- |
+| Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot |
+
 # How?
 ## Method 1: Best Method (FullROM)
 The best experience for any OS is using FullROM. This brings Coreboot+EDK2 but comes with some issues like not being able to use Chrome OS at all unless the stock firmware is restored, and is the only way to run Windows with proper drivers. The follow guide is for Cr50 Chromebooks with the "Cr50 (Battery)" WP method, use [MrChromebox's device table](https://docs.mrchromebox.tech/docs/supported-devices.html) to find your WP method.
