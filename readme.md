@@ -40,8 +40,10 @@ Overall it's unoptimized and difficult to use. It's very limiting for powerusers
 ## Why make this guide?
 There isn't a list of ways to run different operating systems on Chromebooks like here, and most people are unaware of methods like Shimboot or Submarine, and only know of the traditional Full ROM and RW_Legacy, and most people go into public Discords asking for someone to hold their hand as they install a better OS.
 
-## <details>
- <summary>Picture Evidence</summary>
+
+## Picture Evidence
+<details>
+ <summary><b>Click here</b></summary>
 | <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
 | ----- | ----- |
 | Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot |
