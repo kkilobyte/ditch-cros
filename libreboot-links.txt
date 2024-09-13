@@ -1,0 +1,3 @@
+https://mirrors.mit.edu/libreboot/oldstable/20160818/rom/depthcharge/libreboot_r20160818_depthcharge_veyron_speedy.tar.xz - depthcharge veyron speedy
+https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_bob.tar.xz - uboot gru bob
+https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_kevin.tar.xz - uboot gru kevin
