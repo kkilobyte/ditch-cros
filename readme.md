@@ -8,7 +8,7 @@
 - [How?](#how-)
   * [Method 1: FullROM](#method-1--best-method--fullrom-)
   * [Method 2: AltFw & RW_Legacy](#method-2--easiest-method--altfw---rw-legacy-)
-  * [Method 3: Submarine](#method-3--submarine)
+  * [Method 3: Submarine](#method-3-submarine)
     + [Using a USB drive or SD card](#using-a-usb-drive-or-sd-card)
     + [Using internal storage](#using-internal-storage)
   * [Method 4: Shim](#method-4--shim)
