@@ -1,6 +1,6 @@
 <h3 align="center">
-  <img src="img/thumbnail.jpg" width="200"/> \
-  kkilobyte/ditch-cros \
+  <img src="img/thumbnail.jpg" width="200"/> <br>
+  kkilobyte/ditch-cros <br>
   A guide to ditching Chrome OS on your Chrome OS device
 </h3>
 
