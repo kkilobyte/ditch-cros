@@ -1,8 +1,8 @@
-<h1 align="center">
+<h2 align="center">
   <img src="img/thumbnail.jpg" width="400"/> <br>
   kkilobyte/ditch-cros <br>
   A guide to ditching Chrome OS on your Chrome OS device
-</h1>
+</h2>
 
 ## Table of Contents
 - [kkilobyte/ditch-cros](#kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
