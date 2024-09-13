@@ -1,9 +1,8 @@
-<!-- # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device -->
 <h3 align="center">
-  <img src="img/thumbnail.jpg" />
-  # kkilobyte/ditch-cros 
-  A guide to ditching Chrome OS on your Chrome OS device
+  <img src="img/thumbnail.jpg" width="200"/>
 </h3>
+
+# kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
 
 ## Table of Contents
 - [kkilobyte/ditch-cros](#kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
