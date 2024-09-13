@@ -1,24 +1,24 @@
 # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
 ## Table of Contents
-- [kkilobyte/ditch-cros](#kkilobyte-ditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
-  * [DISCLAIMER!!!](#disclaimer---)
-  * [Why remove ChromeOS?](#why-remove-chromeos-)
-  * [Why make this guide?](#why-make-this-guide-)
+- [kkilobyte/ditch-cros](#kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
+  * [DISCLAIMER!!!](#disclaimer)
+  * [Why remove ChromeOS?](#why-remove-chromeos)
+  * [Why make this guide?](#why-make-this-guide)
   * [Picture Evidence](#picture-evidence)
-- [How?](#how-)
-  * [Method 1: FullROM](#method-1--best-method--fullrom-)
-  * [Method 2: AltFw & RW_Legacy](#method-2--easiest-method--altfw---rw-legacy-)
+- [How?](#how)
+  * [Method 1: FullROM](#method-1-best-method-fullrom)
+  * [Method 2: AltFw & RW_Legacy](#method-2-easiest-method-altfw--rw_legacy)
   * [Method 3: Submarine](#method-3-submarine)
     + [Using a USB drive or SD card](#using-a-usb-drive-or-sd-card)
     + [Using internal storage](#using-internal-storage)
-  * [Method 4: Shim](#method-4--shim)
-  * [Method 5: Libreboot](#method-5--libreboot--basically-fullrom-for-two-arm-boards-)
+  * [Method 4: Shim](#method-4-shim)
+  * [Method 5: Libreboot](#method-5-libreboot)
 - [Issues](#issues)
   * [NOTICE!](#notice)
   * [General](#general)
   * [Full ROM](#full-rom)
   * [AltFw](#altfw)
-  * [RW_Legacy](#rw-legacy)
+  * [RW_Legacy](#rw_legacy)
   * [Submarine](#submarine)
   * [Shim](#shim)
   * [Libreboot](#libreboot)
@@ -199,7 +199,7 @@ Shim-based Linux booting uses the default Coreboot+Depthcharge firmware that Goo
 
 # UNFINISHED GUIDE
 
-## Method 5: Libreboot (basically FullROM for two ARM boards)
+## Method 5: Libreboot
 Libreboot, a Coreboot distro, has [*official* Chromebook support](https://libreboot.org/docs/install/chromebooks.html) but only for "nyan" and "gru" Chrome devices.
 
 1. Back up all data using a cloud service or external media.
