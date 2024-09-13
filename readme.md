@@ -40,7 +40,8 @@ Overall it's unoptimized and difficult to use. It's very limiting for powerusers
 ## Why make this guide?
 There isn't a list of ways to run different operating systems on Chromebooks like here, and most people are unaware of methods like Shimboot or Submarine, and only know of the traditional Full ROM and RW_Legacy, and most people go into public Discords asking for someone to hold their hand as they install a better OS.
 
-## Picture Evidence
+## <details>
+ <summary>Picture Evidence</summary>
 | <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
 | ----- | ----- |
 | Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot |
@@ -66,6 +67,7 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 | Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM |
 
 (credits to error404/null/symlink, kelsea/crossystem, kxtzownsu/katelyn, and vk6/ading2210 because i stole half of these from them)
+</details>
 
 # How?
 ## Method 1: Best Method (FullROM)
