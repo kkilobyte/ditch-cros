@@ -5,7 +5,7 @@
 </h2>
 
 ## Table of Contents
-- [kkilobyte/ditch-cros](#kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
+- [kkilobyte/ditch-cros](#-----kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
   * [DISCLAIMER!!!](#disclaimer)
   * [Why remove ChromeOS?](#why-remove-chromeos)
   * [Why make this guide?](#why-make-this-guide)
