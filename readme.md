@@ -146,7 +146,7 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 12. Run `cd; sudo dd if=MyFiles/Downloads/submarine-<arch>.kpart of=/dev/<storage device> bs=16M status=progress oflag=direct`.
 13. Take out your USB drive, run `sudo reboot` or press `⟳+⏻ `, plug in the device you flashed in on the white screen and press Ctrl+U.
 14. If all goes well, you should soon see the Submarine boot menu.
-15. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
+15. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch). If you want Ultramarine Linux (the Linux distro endorsed by Chrultrabook and by the same devs as Submarine), you can apply for the [Ultramarine ARM Chromebook Beta Program](https://wiki.ultramarine-linux.org/en/chromebook/armbeta/) to test it out. (Just note you must be technically-versed to get in).
 16. Hooray!
 17. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
@@ -156,7 +156,7 @@ EOL Chromebooks do not support either. Stoneyridge Chromebooks may not work with
 10. Start by creating a 16 MB EXT4 partition using your favorite partitioning tool.
 11. Run `cgpt add -i <partition number> -t kernel -P 15 -T 1 -S 1 /dev/mmcblk0`
 12. Run `cd; sudo dd if=MyFiles/Downloads/submarine-<arch>.kpart of=/dev/mmcblk0p<partition> bs=16M status=progress oflag=direct`.
-13. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch).
+13. You should be able to install Linux via the boot menu off of a USB drive, to install Linux Mint (Debian edition), follow [this guide](https://developer.fyralabs.com/submarine/guide_lmde), for Debian Linux, follow [this guide](https://developer.fyralabs.com/submarine/guide_debian), and for Arch Linux, follow [this guide](https://developer.fyralabs.com/submarine/guide_arch). If you want Ultramarine Linux (the Linux distro endorsed by Chrultrabook and by the same devs as Submarine), you can apply for the [Ultramarine ARM Chromebook Beta Program](https://wiki.ultramarine-linux.org/en/chromebook/armbeta/) to test it out. (Just note you must be technically-versed to get in).
 14. Hooray!
 15. Bonus:
 - Linux Audio: [weirdtreething/chromebook-linux-audio](https://github.com/weirdtreething/chromebook-linux-audio)
