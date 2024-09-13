@@ -1,4 +1,9 @@
-# kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device
+<!-- # kkilobyte/ditch-cros - A guide to ditching Chrome OS on your Chrome OS device -->
+<h3 align="center">
+  <img src="img/thumbnail.jpg" />
+  kkilobyte/ditch-cros 
+  A guide to ditching Chrome OS on your Chrome OS device
+</h3>
 ## Table of Contents
 - [kkilobyte/ditch-cros](#kkilobyteditch-cros---a-guide-to-ditching-chrome-os-on-your-chrome-os-device)
   * [DISCLAIMER!!!](#disclaimer)
