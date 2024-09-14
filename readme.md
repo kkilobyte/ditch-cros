@@ -10,6 +10,7 @@
   * [Why remove ChromeOS?](#why-remove-chromeos)
   * [Why make this guide?](#why-make-this-guide)
   * [Picture Evidence](#picture-evidence)
+- [Unenrollment](unenroll.md)
 - [How?](#how)
   * [Method 1: FullROM](#method-1-best-method-fullrom)
   * [Method 2: AltFw & RW_Legacy](#method-2-easiest-method-altfw--rw_legacy)
