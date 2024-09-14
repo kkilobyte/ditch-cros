@@ -14,6 +14,8 @@ On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to sc
 
 # How?
 ## ChromeOS v101 and below - Crosh Root Escalation
+Pretty cool universal USB-less unenrollment exploit that requires you to have a Chromebook that hasn't been touched in years. It exploits a bash shell and root escalation method in Crosh that has been long patched, but still very neat and very easy.
+
 1. Login to your Chromebook.
 2. Open Crosh with `ctrl+alt+t`. If it says `crosh is blocked`, use SH1mmer.
 3. Paste the following in:
@@ -28,8 +30,6 @@ On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to sc
 10. Wait for ChromeOS to boot, and then go through the setup.
 11. It should ask you to sign in with a personal account.
 12. Enjoy!
-
-# This guide below is UNFINISHED!!!
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
@@ -104,19 +104,31 @@ I do not have permission to give out information about icarus.
 
 1. use a proxy or shimboot
 
-## UNRELEASED!!: Crsh2tty - teaser
+## CRSH2TTY: every single release ever (tested v31 to v128)
+CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that should not even work at all yet it has been tested on many devices, included new ones like `nissa craaskbowl` to extremely old ones like `peppy`. No one is exactly sure how this works, but it requires two 2-second waits and then one 15-hour wait to work.
+
+1. Powerwash using `ctrl+shift+q+q` and then `ctrl+alt+shift+r`. If this doesn't work, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`, and then `enter`.
+2. Proceed through ChromeOS setup as normal.
+3. When it starts to enroll, wait 2 seconds then restart by pressing `⟳+⏻ ` (`refresh+power`).
+4. When it starts to enroll again, wait 2 seconds and press `esc+⟳+⏻ ` (`esc+refresh+power`) then `⏻ ` (`power`) to turn it off.
+5. Leave it off for ***15 hours*** or more.
+6. Once 15 hours is up, turn on the Chromebook. You should be greeted at the `Welcome to your Chromebook` screen, you should already be connected to Wi-Fi, so press `Get started`.
+7. On the `Get connected` screen, just press `Next`, you should see `Getting your device ready`, wait on this screen, and then you should see `Choose your Chromebook's setup`. 
+9. Hooray!!!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
-# Kernver Info
+# Kernver to ChromeOS table
+Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 3 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
+In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
 
-## Kernver 0 and 1
-These versions are basically the same. You have full access to any ChromeOS version (unless you update your kernver). If you are on kernver 1 but on ChromeOS v119 and above, you can downgrade to ChromeOS v105 to use SH1mmer deprovision, if you are on ChromeOS v118 or below, just use CryptoSmite, it's already included in SH1mmer payloads.
+| Kernver   | ChromeOS version            |
+|-----------|-----------------------------|
+| Kernver 0 | unlimited to ChromeOS v111<sup>1</sup> |
+| Kernver 1 | unlimited to ChromeOS v111<sup>1</sup> |
+| Kernver 2 | ChromeOS v112 to v119<sup>2</sup>       |
+| Kernver 3 | ChromeOS v120 to v125       |
+| Kernver 4 | ChromeOS v126 to v129       |
+| Kernver 5 | ChromeOS v130               |
 
-## Kernver 2
-You have full access to ChromeOS v112 and above, if you are on ChromeOS v119 or above, you can downgrade to ChromeOS v112 to use Cryptosmite.
-
-## Kernver 3
-There is nothing you can do except wait for OlyBmmer release. If you are on ChromeOS v125 or above, you can downgrade to ChromeOS v120 and then use [caub](https://caub.glitch.me), if that site is blocked you can download the HTML at [bypassiwastaken/tinies](https://github.com/bypassiwastaken/tinies).
-
-## Kernver 4
-There is nothing you can do except wait for icarus release or cry. On newui boards like `dedede` or `nissa`, most devices with kv4 will have their *shim keys rolled*, meaning old shims will no longer work, and the new shims with the new keys have rootfs verification, meaning there will never be a shim-based unenrollment or Linux enviroment again unless we find new shims and find a way to get around verification. 
+v110 or lower recommended<sup>1</sup> \
+v118 or lower recommended<sup>2</sup>
