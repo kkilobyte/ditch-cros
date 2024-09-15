@@ -107,19 +107,6 @@ I do not have permission to give out information about icarus.
 
 1. use a proxy or shimboot
 
-## CRSH2TTY: every single release ever (tested v31 to v128)
-CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that should not even work at all yet it has been tested on many devices, included new ones like `nissa craaskbowl` to extremely old ones like `peppy`. No one is exactly sure how this works, but it requires two 2-second waits and then one 15-hour wait to work.
-
-1. Powerwash using `ctrl+shift+q+q` and then `ctrl+alt+shift+r`. If this doesn't work, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`, and then `enter`.
-2. Proceed through ChromeOS setup as normal.
-3. When it starts to enroll, wait 2 seconds then restart by pressing `⟳+⏻ ` (`refresh+power`).
-4. When it starts to enroll again, wait 2 seconds and press `esc+⟳+⏻ ` (`esc+refresh+power`) then `⏻ ` (`power`) to turn it off.
-5. Leave it off for ***15 hours*** or more.
-6. Once 15 hours is up, turn on the Chromebook. You should be greeted at the `Welcome to your Chromebook` screen, you should already be connected to Wi-Fi, so press `Get started`.
-7. On the `Get connected` screen, just press `Next`, you should see `Getting your device ready`, wait on this screen, and then you should see `Choose your Chromebook's setup`. 
-9. Hooray!!!
-<img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
-
 # Kernver to ChromeOS table
 Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 3 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
 In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
