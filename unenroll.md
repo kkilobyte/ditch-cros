@@ -107,6 +107,9 @@ I do not have permission to give out information about icarus.
 
 1. use a proxy or shimboot
 
+## Notice: CRSH2TTY
+CRSH2TTY was a fake exploit, don't waste your time on it. People who has success on CRSH2TTY had a coincidental unenroll or were lying out of their ass.
+
 # Kernver to ChromeOS table
 Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 3 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
 In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
