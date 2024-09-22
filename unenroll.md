@@ -126,8 +126,8 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 
 | Kernver   | ChromeOS version            | Unenroll method |
 |-----------|-----------------------------|---------------|
-| Kernver 0 | unlimited to ChromeOS v111<sup>1</sup> | SH1mmer (rootesc to v101) |
-| Kernver 1 | unlimited to ChromeOS v111<sup>1</sup> | SH1mmer (rootesc to v101) |
+| Kernver 0 | unlimited to ChromeOS v111<sup>1</sup> | Root Esc (to v101) or SH1mmer (to v110) |
+| Kernver 1 | unlimited to ChromeOS v111<sup>1</sup> | Root Esc (to v101) or SH1mmer (to v110) |
 | Kernver 2 | ChromeOS v112 to v119<sup>2</sup>       | Cryptosmite (to v118) |
 | Kernver 3 | ChromeOS v120 to v125       | OlyBmmer |
 | Kernver 4 | ChromeOS v126 to v129       | icarus |
