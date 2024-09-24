@@ -120,18 +120,20 @@ CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that sh
 9. Hooray!!!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
-# Kernver to ChromeOS table
+# Kernver (kv) to ChromeOS (crOS) table
 Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 3 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
 In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
 
 | Kernver   | ChromeOS version            | Unenroll method |
 |-----------|-----------------------------|---------------|
-| Kernver 0 | unlimited to ChromeOS v111<sup>1</sup> | Root Esc (to v101) or SH1mmer (to v110) |
-| Kernver 1 | unlimited to ChromeOS v111<sup>1</sup> | Root Esc (to v101) or SH1mmer (to v110) |
-| Kernver 2 | ChromeOS v112 to v119<sup>2</sup>       | Cryptosmite (to v118) |
-| Kernver 3 | ChromeOS v120 to v125       | OlyBmmer |
-| Kernver 4 | ChromeOS v126 to v129       | icarus |
-| Kernver 5 | ChromeOS v130+              | CRSH2TTY|
+| 0<sup>1</sup> | any up to v111<sup>3</sup> | Root Esc (to v101) or SH1mmer (to v110) |
+| 1 | any up to v111<sup>3</sup> | Root Esc (to v101) or SH1mmer (to v110) |
+| 2<sup>2</sup> | v112 to v119<sup>4</sup>| Cryptosmite (to v118) |
+| 3 | v120 to v125 | OlyBmmer |
+| 4 | v126 to v129 | icarus |
+| 5 | v130+ | CRSH2TTY |
 
-v110 or lower recommended<sup>1</sup> \
-v118 or lower recommended<sup>2</sup>
+-# Kv0 is usually a factory setting bug<sup>1</sup> \
+-# On some devices, kv2 is actually crOS v111<sup>2</sup> \
+-# v110 or lower recommended<sup>3</sup> \
+-# v118 or lower recommended<sup>4</sup>
