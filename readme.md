@@ -234,7 +234,7 @@ sudo flashrom -p host -v depthcharge.rom`
 [Debian has a DebianOn guide](https://wiki.debian.org/InstallingDebianOn/Asus/C201) for `veyron speedy`, however other RK3288 based Chromebooks should work too.
 Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
 16. Back up `depthcharge.rom` to a cloud service or external media.
-17. 
+17. If you have a `gru kevin` device, [download this](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_kevin.tar.xz), if you have a `gru bob` device, [download this instead](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_bob.tar.xz). 
 
 # Issues
 ## NOTICE!
