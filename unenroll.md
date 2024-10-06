@@ -113,9 +113,12 @@ BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollm
 8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<badrecovery file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
 9. Plug in the USB drive that you want to use for BadRecovery, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
-11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`). ONLY IF the image you downloaded has "`dev-only`" in the file name, press `ctrl+d` and then `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB, otherwise just insert the USB normally.
+11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`). ONLY IF the image you downloaded has "`dev-only`" in the file name, press `ctrl+d` and then `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB, otherwise just insert the USB normally. You should now be at a weird looking hacker screen that says BADRECOVERY.
+<img src="/img/tutorial/badrecovery.jpg" width="400">
+
 12. Preform an EC reset by pressing `⟳+⏻ ` (`refresh+power`). You should reboot into ChromeOS.
-13. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy) (hopefully)!
+13. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+<img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 ## UNRELEASED!!: ChromeOS v130 and below - icarus
 I do not have permission to give out information about icarus.
