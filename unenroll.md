@@ -31,8 +31,7 @@ Just like this \
 8. Press `ctrl+d` and then `enter`.
 9. On the scary screen with black text at the top left, press `enter` again.
 10. Wait for ChromeOS to boot, and then go through the setup.
-11. It should ask you to sign in with a personal account.
-12. Enjoy!
+11. Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
