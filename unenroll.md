@@ -37,10 +37,10 @@ Just like this \
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
 
-1. Back up all data to external media or cloud service.
-2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux won't work with this.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
+1. Back up all data to an external storage device or cloud service. You must not use the same storage device as the device you will be using SH1mmer with.
+2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux users skip this step.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
 3. [Identify](/device-identify.md) what Chromebook *board* you have.
-4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
+4. Find and download your *board*'s SH1mmer [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use BadRecovery or CRSH2TTY.
 5. Open your "Downloads" folder in the "Files" app, double click on the SH1mmer zip file, and drag the SH1mmer bin file to your Downloads folder.
 6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
 
@@ -48,7 +48,7 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your SH1mmer bin file.
 <img src="/img/tutorial/cru-local-image.png">
 
-8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+8. If you don't use Linux, skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
 9. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
 11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
@@ -58,16 +58,16 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 13. Press `d` and then `enter`, this should come with two messages both having "SUCCESS!". Once it says "FINISHED", press `⟳+⏻ ` (refresh+power).
 14. You should be greeted at a "OS Verification is off" screen but with no black text in the corner. Press `ctrl+d` whenever you Chromebook turns on and you see this screen. 
 15. Setup ChromeOS as normal
-16. Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+16. Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 ## ChromeOS v118 and below - CryptoSmite
 The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's not-as-cool "CryptoSmite" option. This writes a corrupted cryptohome to your data partition, or "stateful", using some random Google account, but this removes FWMP, so you can easily go into Developer Mode with no restrictions.
 
-1. Back up all data to external media or cloud service.
-2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux won't work with this.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use SH1mmer anyways.
+1. Back up all data to an external storage device or cloud service. You must not use the same storage device as the device you will be using CryptoSmite with.
+2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux users skip this step.) If you only have the Chromebook and this is blocked, try using [Skiovox](https://skiovox.com/skiovox.pdf). If you are using a version where Skiovox is patched, you can't use CryptoSmite anyways.
 3. [Identify](/device-identify.md) what Chromebook *board* you have.
-4. Find your *board* [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use OlyBmmer.
+4. Find and download your *board*'s SH1mmer [here](https://dl.darkn.bio/SH1mmer/Prebuilt/Legacy), if it's missing, good luck, use BadRecovery or CRSH2TTY.
 5. Open your "Downloads" folder in the "Files" app, double click on the SH1mmer zip file, and drag the SH1mmer bin file to your Downloads folder.
 6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
 
@@ -94,18 +94,35 @@ The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's
 22. Now run `cryptohome --action=remove_firmware_management_parameters`
 23. Press `ctrl+alt+🠜` (above the 1), and setup ChromeOS as normal.
 24. If you see `Enterprise enrollment`, quickly boot into SH1mmer, open bash, and run `mkfs.ext4 /dev/mmcblk*p1`, and repeat 13 to 23 again. 
-25. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-1-best-method-fullrom) or [AltFw](https://github.com/kkilobyte/ditch-cros/blob/main/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+25. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
-## UNRELEASED!!: ChromeOS v124 and below - OlyBmmer
-The preferred unenrollment method for ChromeOS v124 and below is using OlyBmmer. I do not have information about OlyBmmer other than it does *not* require an RMA shim unlike the other unenrollment exploits.
+## ChromeOS v124 and below - BadRecovery (formerly OlyBmmer) <!-- i have no idea how accurate this guide is going to be because i have never used badrecovery before -->
+BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollment method for ChromeOS v124 and below. It leverages a vulnerability in recovery images to get arbitrary code execution or to chain to other exploits (such as Cryptosmite).
 
-1. use a proxy or shimboot
+1. Back up all data to an external storage device or cloud service. You must not use the same storage device as the device you will be using BadRecovery with.
+2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux users skip this step.) 
+3. [Identify](/device-identify.md) what Chromebook *board* you have.
+4. Find and download your *board*'s BadRecovery [here](https://dl.darkn.bio/BadRecovery), if it's missing, good luck, use CRSH2TTY or [build BadRecovery yourself](https://github.com/BinBashBanana/badrecovery).
+5. Open your "Downloads" folder in the "Files" app, double click on the BadRecovery zip file, and drag the SH1mmer bin file to your Downloads folder.
+6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
+
+<img src="/img/tutorial/chrome-recovery-extension.png">
+7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your BadRecovery bin file.
+<img src="/img/tutorial/cru-local-image.png">
+
+8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<badrecovery file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+9. Plug in the USB drive that you want to use for BadRecovery, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
+10. Verify this USB drive doesn't have important data and then wait for it to flash.
+11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`). ONLY IF the image you downloaded has "`dev-only`" in the file name, press `ctrl+d` and then `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB, otherwise just insert the USB normally.
+12. Unclear what to do after this. Remove the USB drive and wait for ChromeOS to reboot?
+13. Congrats? Now you probably can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy) (hopefully)!\
+(someone please make a pr that corrects the rest because it is really unclear to me)
 
 ## UNRELEASED!!: ChromeOS v130 and below - icarus
 I do not have permission to give out information about icarus.
 
-1. use a proxy or shimboot
+1. use a proxy or shimboot or crsh2tty or wait until around janurary 1st, 2025
 
 ## CRSH2TTY: every single release ever (tested v31 to v128)
 CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that should not even work at all yet it has been tested on many devices, included new ones like `nissa craaskbowl` to extremely old ones like `peppy`. No one is exactly sure how this works, but it requires two 2-second waits and then one 15-hour wait to work.
