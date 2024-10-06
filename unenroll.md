@@ -13,7 +13,7 @@ On `oldui` boards (with a white background, such as `snappy` or `octopus`), you 
 On `newui` boards like `nissa` or `dedede`, you have to use the `🠟` key to scroll down to the bottom where you should find kernver
 
 # How?
-## ChromeOS v101 and below - Crosh Root Escalation
+## ChromeOS v101 and below - SHroot
 Pretty cool universal USB-less unenrollment exploit that requires you to have a Chromebook that hasn't been touched in years. It exploits a bash shell and root escalation method in Crosh that has been long patched, but still very neat and very easy.
 
 1. Login to your Chromebook.
