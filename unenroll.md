@@ -151,7 +151,7 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 | 4 | v125 to v129 | icarus |
 | 5 | v130+ | CRSH2TTY |
 
--# Kv0 is usually a factory setting bug<sup>1</sup> \
--# On some devices, kv2 is actually crOS v111<sup>2</sup> \
--# v110 or lower recommended<sup>3</sup> \
--# v118 or lower recommended<sup>4</sup>
+<sub><sup>Kv0 is usually a factory setting bug<sup>1</sup></sup></sub> \
+<sub><sup>On some devices, kv2 is actually crOS v111<sup>2</sup></sup></sub> \
+<sub><sup>v110 or lower recommended<sup>3</sup></sup></sub> \
+<sub><sup>v118 or lower recommended<sup>4</sup></sup></sub>
