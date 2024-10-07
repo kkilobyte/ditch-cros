@@ -147,8 +147,8 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 | 0<sup>1</sup> | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 1 | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 2<sup>2</sup> | v112 to v119<sup>4</sup>| Cryptosmite (to v118) |
-| 3 | v120 to v125 | BadRecovery |
-| 4 | v126 to v129 | icarus |
+| 3 | v120 to v124 | BadRecovery |
+| 4 | v125 to v129 | icarus |
 | 5 | v130+ | CRSH2TTY |
 
 -# Kv0 is usually a factory setting bug<sup>1</sup> \
