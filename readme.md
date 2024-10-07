@@ -234,24 +234,32 @@ sudo flashrom -p host -v depthcharge.rom`
 [Debian has a DebianOn guide](https://wiki.debian.org/InstallingDebianOn/Asus/C201) for `veyron speedy`, however other RK3288 based Chromebooks should work too.
 Follow [this guide](https://runtimeterror.dev/burn-an-iso-to-usb-with-the-chromebook-recovery-utility) to flash using ChromeOS.
 16. Back up `depthcharge.rom` to a cloud service or external media.
-17. If you have a `gru kevin` device, [download this](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_kevin.tar.xz), if you have a `gru bob` device, [download this instead](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_bob.tar.xz). 
+17. If you have a `gru kevin` device, [download this](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_kevin.tar.xz), if you have a `gru bob` device, [download this instead](https://mirrors.mit.edu/libreboot/stable/20240612/roms/libreboot-20240612_gru_bob.tar.xz).
+### todo: add details and cbfstool download; basic steps below
+19. get vpd from depthcharge.rom
+20. put vpd in libreboot firmware
+21. flash libreboot
+22. install a supported distro 
 
 # Issues
 ## NOTICE!
-General hardware issues like the numerous hardware bugs `celes` has or the very poor quality control of `kohaku` causing the deteriorating trackpad grounding or the faulty backlight circuit, still apply REGARDLESS the firmware. This will persist from either ChromeOS or Linux or Windows or WHATEVER. Do not blame hardware bugs on the custom firmware.
+General hardware issues like the numerous hardware bugs `celes` has or the very poor quality control of `hatch kohaku` causing the deteriorating trackpad grounding or the faulty backlight circuit, still apply REGARDLESS the firmware. This will persist from either ChromeOS or Linux or Windows or WHATEVER. Do not blame hardware bugs on the custom firmware.
 ## General
 1. No Ubuntu support. (Fuck Canonical and Ubuntu anyways.)
 2. Requires driver fuckery on all OSes, and unsupported OSes will have issues.
 3. No ARM support EXCEPT with Submarine, Shimboot, and Libreboot
 4. Paid Windows audio driver, (on non-EOL and non-Stoneyridge Chromebooks, support CoolStar anyways).
 5. Sometimes the Chromebook will turn itself back on (like when the charger is plugged in or taken out) in BOTH Linux and Windows.
-6. DisplayPort and VGA output via the DVI port doesn't work in Windows on `stumpy`.
+6. DisplayPort and VGA output via the DVI port doesn't work in Windows on `stumpy` Chromeboxes.
+7. Newer Chromebooks like `dedede boten` will fail to suspend on lid close half the time.
+8. The keyboard on newer 2-in-1 convertible Chromebooks like `dedede cret360` or `dedede boten` will stay active even in tablet form factor.
+9. `candy` doesn't suspend at all.
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
 2. Requires WP to be OFF
 3. Requires an unenrolled device.
 ## AltFw
-1. No touchscreen (at least not on `octopus`).
+1. No touchscreen.
 2. No Windows support. (You will run into driver issues, like with the touchscreen or trackpad.)
 3. Requires a key combo to boot. (Workaround exists but requires WP to be OFF to change GBB flags.)
 4. Requires an unenrolled device.
@@ -263,10 +271,11 @@ General hardware issues like the numerous hardware bugs `celes` has or the very 
 10. Menus such as the boot splash, EDK2 UEFI settings, EFI shell, or GRUB are stretched and look kinda weird.
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
-1. Broken suspend (at least on `snappy`).
+1. Broken suspend (at least on `snappy alan`).
 2. BIOS-only / no UEFI.
-3. Everything before GPU drivers load, such as Windows Boot Loader, Ventoy, GRUB, or verbose boot only shows in a small 800x600 box in the top left portion of the screen, at least on `snappy`.
-4. Too minimal, no TUI's, you only get a CLI to select a number that corresponds to your boot device, similar to Shimboot.
+3. Everything before GPU drivers load, such as Windows Boot Loader, Ventoy, GRUB, or verbose boot only shows in a small 800x600 box in the top left portion of the screen, at least on `snappy alan`.
+4. Too minimal, only BIOS settings you get is basically changing boot loader order or selecting a boot device
+5. No eye candy
 ## Submarine
 1. Requires an unenrolled device.
 2. No Windows *at all*.
@@ -278,7 +287,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 2. Relies on a glorified chroot.
 3. The RMA shim is never updated including the Linux kernel, on `octopus` Chromebooks you get Linux 4.14, on `dedede` Chromebooks you get Linux 5.1, on `reks` and `kefka` you get a Linux kernel too old to run X11!
 4. The kernel has a bad configuration (since normal RMA shims aren't meant for normal desktop Linux,) meaning you get no audio (on boards like `nissa` and `dedede`) and no suspend or swap on all boards.
-5. Broken GPU acceleration half the time. (For example: X11 on my `meep`, `cret`, `phaser360`, and `fleex`, or Gnome Wayland.)
+5. Broken GPU acceleration in X11 or on Debian Unstable.
 6. Requires a key combo and a few key inputs to boot.
 7. Requires manual building for Linux distros that are not Debian 12 Stable (in Shimboot) or Chrome OS Flex v109 and Arch Linux (in TerraOS).
 8. No Windows *at all*.
@@ -294,4 +303,3 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 4. Horrible Linux distro support.
 5. No Windows *at all* afaik.
 6. Pretty mediocore install guide (FROM Libre themselves!!!)
-7. I can't find a download.
