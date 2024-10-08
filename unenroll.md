@@ -103,7 +103,7 @@ BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollm
 2. If you are using ChromeOS, MacOS, or Windows, download [this extension](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm). (Linux users skip this step.) 
 3. [Identify](/device-identify.md) what Chromebook *board* you have.
 4. Find and download your *board*'s BadRecovery [here](https://dl.darkn.bio/BadRecovery), if it's missing, good luck, use CRSH2TTY or [build BadRecovery yourself](https://github.com/BinBashBanana/badrecovery).
-5. Open your "Downloads" folder in the "Files" app, double click on the BadRecovery zip file, and drag the SH1mmer bin file to your Downloads folder.
+5. Open your "Downloads" folder in the "Files" app, double click on the BadRecovery zip file, and drag the BadRecovery bin file to your Downloads folder.
 6. If you are using Linux, skip to step 8, otherwise open a Chrome tab, click on the puzzle icon in the top right, and click on "Chromebook Recovery Utility".
 
 <img src="/img/tutorial/chrome-recovery-extension.png">
