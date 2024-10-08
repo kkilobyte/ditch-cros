@@ -84,13 +84,13 @@ The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's
 13. Press `p` and then select "Cryptosmite" with the arrow keys.
 14. Wait for ChromeOS to reboot.
 15. Connect to internet.
-16. Press `esc+⟳+⏻ ` and then `ctrl+d`.
-17. Press `esc+⟳+⏻ ` again but this time press `h` for `Touch .developer_mode` and then preform an EC reset by pressing `⟳+⏻ ` (`refresh+power`), on the OS verification screen press `ctrl+d`
+16. Remove the SH1mmer USB from the Chromebook and press `esc+⟳+⏻ ` and then `ctrl+d`.
+17. Connect the USB back into the chromebook and press `esc+⟳+⏻ ` again but this time press `h` for `Touch .developer_mode` and then preform an EC reset by pressing `⟳+⏻ ` (`refresh+power`), on the OS verification screen press `ctrl+d`.
 18. Wait for ChromeOS to boot.
 19. QUICKLY!!! press `ctrl+alt+🠞` (above the 2, if you don't have a 🠞 key, press `ctrl+alt+⟳` (refresh, above the 2 or 4) instead).
 20. Now type in `root` and press `enter`.
 21. Run `vpd -i RW_VPD -s check_enrollment=0`
-22. Now run `cryptohome --action=remove_firmware_management_parameters`
+22. Now run `cryptohome --action=remove_firmware_management_parameters`. If that shows a bunch of `--action=` text, run `device_management_client --action=remove_firmware_management_parameters` instead.
 23. Press `ctrl+alt+🠜` (above the 1), and setup ChromeOS as normal.
 24. If you see `Enterprise enrollment`, quickly boot into SH1mmer, open bash, and run `mkfs.ext4 /dev/mmcblk*p1`, and repeat 13 to 23 again. 
 25. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
@@ -139,7 +139,7 @@ CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that sh
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
 # Kernver (kv) to ChromeOS (crOS) table
-Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 3 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
+Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 1 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
 In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
 
 | Kernver   | ChromeOS version            | Unenroll method |
@@ -147,7 +147,7 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 | 0<sup>1</sup> | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 1 | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 2<sup>2</sup> | v112 to v119<sup>4</sup>| Cryptosmite (to v118) |
-| 3 | v120 to v124 | BadRecovery |
+| 3 | v120 to v124<sup>5</sup> | BadRecovery |
 | 4 | v125 to v129 | icarus |
 | 5 | v130+ | CRSH2TTY |
 
@@ -155,3 +155,4 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 <sub><sup>On some devices, kv2 is actually crOS v111<sup>2</sup></sup></sub> \
 <sub><sup>v110 or lower recommended<sup>3</sup></sup></sub> \
 <sub><sup>v118 or lower recommended<sup>4</sup></sup></sub>
+<sub><sup>Some early versions of v120 is kv2, however most versions are kv3<sup>5</sup></sup></sub>
