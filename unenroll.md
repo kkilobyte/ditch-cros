@@ -154,4 +154,5 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 <sub><sup>v110 or lower recommended<sup>3</sup></sup></sub> \
 <sub><sup>v118 or lower recommended<sup>4</sup></sup></sub> \
 <sub><sup>Some early versions of v120 is kv2, however newer versions are kv3<sup>5</sup></sup></sub> \
-<sub><sup>Some early versions of v125 is kv3, however newer versions are kv4<sup>5</sup></sup></sub>
+<sub><sup>Some early versions of v125 is kv3, however newer versions are kv4<sup>5</sup></sup></sub> \
+<sub><sup>v124 or lower recommended<sup>5</sup></sup></sub>
