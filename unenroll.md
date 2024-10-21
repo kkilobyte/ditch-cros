@@ -6,7 +6,7 @@ Remember! You can always use the Shim method for Linux without unenrollment!
 - [Unenrollment](#unenrollment-for-chrome-os-devices)
   * [Why unenroll?](#why-unenroll-)
   * [What Kernver and ChromeOS version do I have?](#what-kernver-and-chromeos-version-do-i-have-)
-- [Kernver (kv) to ChromeOS (crOS) table](#kernver--kv--to-chromeos--cros--table)
+- [Kernver to ChromeOS Table](#kernver--kv--to-chromeos--cros--table)
 - [How do I unenroll?](#how-do-i-unenroll-)
   * [SHroot](#chromeos-v101-and-below---shroot)
   * [SH1mmer](#chromeos-v110-and-below---sh1mmer)
