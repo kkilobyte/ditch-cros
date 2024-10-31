@@ -1,6 +1,6 @@
 # Unenrollment for Chrome OS Devices
 Useful for ditching ChromeOS and using Full ROM, AltFw, or RW_Legacy methods.
-Remember! You can always use the Shim method for Linux without unenrollment!
+Note: You can always use the Shim method for Linux without unenrollment!
 
 ## Table of Contents
 - [Unenrollment](#unenrollment-for-chrome-os-devices)
@@ -13,7 +13,7 @@ Remember! You can always use the Shim method for Linux without unenrollment!
   * [CryptoSmite](#chromeos-v118-and-below---cryptosmite)
   * [BadRecovery](#chromeos-v124-and-below---badrecovery--formerly-olybmmer-------i-have-no-idea-how-accurate-this-guide-is-going-to-be-because-i-have-never-used-badrecovery-before----)
   * [icarus](#unreleased----chromeos-v130-and-below---icarus)
-  * [CRSH2TTY](#crsh2tty--every-single-release-ever--tested-v31-to-v128-)
+  * [CRSH2TTY](#crsh2tty--all-versions--patched-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -26,7 +26,7 @@ To verify your kernver and your ChromeOS version, you need to first boot ChromeO
 Now, you just scroll down with your eyes until you find `tpm_ver`, and then look to the right of that to find `tpm_kernver`, and your kernver will be the last number to the right of kernver, this means `tpm_kernver=0x00010004` is kernver 4 or kv4.
 
 # Kernver (kv) to ChromeOS (crOS) table
-Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus phaser360` Chromebook with kernver 1 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
+Please note this can be inaccurate because kernver skipping (aka kernskip) is really common. For example, I own an `octopus-phaser360` Chromebook with kernver 1 but on ChromeOS v126 (v126 is kernver 4), and many people got ChromeOS v113 on kernver 1 (v113 is kernver 2).
 In the event of a kernskip, you should downgrade to the versions connected to your kernver to be allowed access to more exploits.
 
 | Kernver   | ChromeOS version            | Unenroll method |
@@ -65,7 +65,7 @@ Just like this \
 8. Press `ctrl+d` and then `enter`.
 9. On the scary screen with black text at the top left, press `enter` again.
 10. Wait for ChromeOS to boot, and then go through the setup.
-11. Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
+11. Now you can set up ChromeOS with a personal Google account and then use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 
 ## ChromeOS v110 and below - SH1mmer
 The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's very cool "deprovision" option. This takes ownership of the TPM and erases the FWMP, along with making ChromeOS not check for enrollment by putting a parameter in the RW portion of the VPD.
@@ -81,7 +81,7 @@ The preferred unenrollment method for ChromeOS v110 and below is using SH1mmer's
 7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your SH1mmer bin file.
 <img src="/img/tutorial/cru-local-image.png">
 
-8. If you don't use Linux, skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+8. If you don't use Linux, skip to step 9, otherwise, open a terminal and run `lsblk` or `fdisk -l` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
 9. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
 11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
@@ -108,7 +108,7 @@ The preferred unenrollment method for ChromeOS v118 and below is using SH1mmer's
 7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your SH1mmer bin file.
 <img src="/img/tutorial/cru-local-image.png">
 
-8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` or `fdisk -l` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<sh1mmer file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
 9. Plug in the USB drive that you want to use for SH1mmer, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
 11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`. Then press `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB.
@@ -144,7 +144,7 @@ BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollm
 7. Click on the ⚙ (settings) icon in the corner and click "Use local image" and the select your BadRecovery bin file.
 <img src="/img/tutorial/cru-local-image.png">
 
-8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<badrecovery file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
+8. If you don't use Linux skip to step 9, otherwise, open a terminal and run `lsblk` or `fdisk -l` and verify what your USB drive is, once you have verified, run `cd ~/Downloads; sudo dd if=<badrecovery file> of=/dev/sd<usb letter> oflag=direct status=progress bs=16M` and wait. Skip to step 10.
 9. Plug in the USB drive that you want to use for BadRecovery, do ***NOT*** use the USB drive with your data if you backed up data to a USB drive.
 10. Verify this USB drive doesn't have important data and then wait for it to flash.
 11. Once finished, press `esc+⟳+⏻ ` (`esc+refresh+power`). ONLY IF the image you downloaded has "`dev-only`" in the file name, press `ctrl+d` and then `esc+⟳+⏻ ` (`esc+refresh+power`) again and insert the USB, otherwise just insert the USB normally. You should now be waiting for your Chromebook to recover, wait for it to recover.
@@ -159,7 +159,9 @@ I do not have permission to give out information about icarus.
 
 1. use a proxy or shimboot or crsh2tty or wait until around janurary 1st, 2025
 
-## CRSH2TTY: every single release ever (tested v31 to v128)
+## CRSH2TTY: All versions (PATCHED!)
+CRSH2TTY has been patched! It will no longer work for ANY Chromebook because it was a server-side bug. The steps remain below for archival purposes.
+
 CRSH2TTY is a very funny exploit. It's a cool universal USB-less exploit that should not even work at all yet it has been tested on many devices, including new ones like `nissa craaskbowl` or `dedede boten` to extremely old ones like `peppy` or `clapper`. No one is exactly sure how this works, but it requires two 2-second waits and then one 15-hour wait to work.
 
 1. Powerwash using `ctrl+shift+q+q` and then `ctrl+alt+shift+r`. If this doesn't work, press `esc+⟳+⏻ ` (`esc+refresh+power`) and then `ctrl+d`, and then `enter`.
