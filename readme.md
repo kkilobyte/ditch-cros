@@ -50,29 +50,29 @@ There isn't a list of ways to run different operating systems on Chromebooks lik
 ## Picture Evidence
 <details>
  <summary><b>Click here</b></summary>
-| <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot" width="400"/> |  
+| <img src="/img/poc/alan-fullrom-alpine-kde.jpg" alt="Alpine Edge KDE on a HP Chromebook 11 G6 EE (`snappy-alan`) using Full ROM" width="400"/> | <img src="/img/poc/phaser360-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (`octopus-phaser360`) using Shimboot" width="400"/> |  
 | ----- | ----- |
-| Alpine Edge KDE on a HP Chromebook 11 G6 EE (alan) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (phaser360) using Shimboot |
+| Alpine Edge KDE on a HP Chromebook 11 G6 EE (`snappy-alan`) using Full ROM | Debian 12 Gnome on a Lenovo 300e Chromebook Flip Gen 2 (`octopus-phaser360`) using Shimboot |
 
-| <img src="/img/poc/vortininja-and-fleex-fullrom-arch-kde.jpg" alt="Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM" width="500"/> |
+| <img src="/img/poc/vortininja-and-fleex-fullrom-arch-kde.jpg" alt="Arch KDE on a HP Chromebook x360 11 G3 EE (`octopus-vortininja`) and Dell Chromebook 3100 (`octopus-fleex`) using Full ROM" width="500"/> |
 | ----- |
-| Arch KDE on a HP Chromebook x360 11 G3 EE (vortininja) and Dell Chromebook 3100 (fleex) using Full ROM |
+| Arch KDE on a HP Chromebook x360 11 G3 EE (`octopus-vortininja`) and Dell Chromebook 3100 (`octopus-fleex`) using Full ROM |
 
-| <img src="/img/poc/hatch-shimboot-debian12-xfce.jpg" alt="Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot" width="400"/> | <img src="/img/poc/drawcia-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a HP Chromebook 11 G9 EE (drawcia) using Shimboot" width="400">
+| <img src="/img/poc/hatch-shimboot-debian12-xfce.jpg" alt="Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (`hatch-akemi`) using Shimboot" width="400"/> | <img src="/img/poc/drawcia-shimboot-debian12-gnome.jpg" alt="Debian 12 Gnome on a HP Chromebook 11 G9 EE (`dedede-drawcia`) using Shimboot" width="400">
 | ----- | ----- |
-| Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (akemi) using Shimboot | Debian 12 Gnome on a HP Chromebook 11 G9 EE (drawcia) using Shimboot |
+| Debian 12 XFCE on a Lenovo IdeaPad Flex 5i Chromebook (`hatch-akemi`) using Shimboot | Debian 12 Gnome on a HP Chromebook 11 G9 EE (`dedede-drawcia`) using Shimboot |
 
-| <img src="/img/poc/vortininja-fullrom-ultramarine-kde.jpg" alt="Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (vortininja) using Full ROM" width="400"/> | <img src="/img/poc/meep-fullrom-bootscreen.jpg" alt="Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (meep) using Full ROM" width="400">
+| <img src="/img/poc/vortininja-fullrom-ultramarine-kde.jpg" alt="Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (`octopus-vortininja`) using Full ROM" width="400"/> | <img src="/img/poc/meep-fullrom-bootscreen.jpg" alt="Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (`octopus-meep`) using Full ROM" width="400">
 | ----- | ----- |
-| Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (vortininja) using Full ROM | Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (meep) using Full ROM |
+| Ultramarine 40 KDE on a HP Chromebook x360 11 G3 EE (`octopus-vortininja`) using Full ROM | Coreboot bootup logo on a HP Chromebook x360 11 G2 EE (`octopus-meep`) using Full ROM |
 
-| <img src="/img/poc/fleex-shimboot-void-dwm.jpg" alt="Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot" width="500"/> | <img src="/img/poc/barla-fullrom-bootscreen.jpg" alt="HP bootup logo on a modified HP Chromebook 11A G6 EE (barla) using Full ROM" width="500">
+| <img src="/img/poc/fleex-shimboot-void-dwm.jpg" alt="Void DWM on a Dell Chromebook 3100 (`octopus-fleex`) using Shimboot" width="500"/> | <img src="/img/poc/barla-fullrom-bootscreen.jpg" alt="HP bootup logo on a modified HP Chromebook 11A G6 EE (`grunt-barla`) using Full ROM" width="500">
 | ----- | ----- | 
-| Void DWM on a Dell Chromebook 3100 (fleex) using Shimboot | HP bootup logo on a modified HP Chromebook 11A G6 EE (barla) using Full ROM | 
+| Void DWM on a Dell Chromebook 3100 (`octopus-fleex`) using Shimboot | HP bootup logo on a modified HP Chromebook 11A G6 EE (`grunt-barla`) using Full ROM | 
 
-| <img src="/img/poc/craaskbowl-fullrom-bootscreen.jpg" alt="Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM" width="500"/> |
+| <img src="/img/poc/craaskbowl-fullrom-bootscreen.jpg" alt="Coreboot boot logo on an Acer Chromebook Spin 511 (`nissa-craaskbowl`) using Full ROM" width="500"/> |
 | ----- |
-| Coreboot boot logo on an Acer Chromebook Spin 511 (craaskbowl) using Full ROM |
+| Coreboot boot logo on an Acer Chromebook Spin 511 (`nissa-craaskbowl`) using Full ROM |
 
 (credits to error404/null/symlink, kelsea/crossystem, kxtzownsu/katelyn, and vk6/ading2210 because i stole half of these from them)
 </details>
@@ -252,7 +252,7 @@ General hardware issues like the numerous hardware bugs `celes` has or the very 
 5. Sometimes the Chromebook will turn itself back on (like when the charger is plugged in or taken out) in BOTH Linux and Windows.
 6. DisplayPort and VGA output via the DVI port doesn't work in Windows on `stumpy` Chromeboxes.
 7. Newer Chromebooks like `dedede boten` will fail to suspend on lid close half the time.
-8. The keyboard on newer 2-in-1 convertible Chromebooks like `dedede cret360` or `dedede boten` will stay active even in tablet form factor.
+8. The keyboard on newer 2-in-1 convertible Chromebooks like `dedede-cret360` or `dedede-boten` will stay active even in tablet form factor.
 9. `candy` doesn't suspend at all.
 ## Full ROM
 1. No Chrome or Chromium OS support, (you will run into driver issues like with audio or the trackpad).
@@ -266,12 +266,12 @@ General hardware issues like the numerous hardware bugs `celes` has or the very 
 5. AltFw payload list works but does not display correctly on Intel Geminilake devices. Just press "1" on the `ctrl+l` (L) menu.
 6. Not available for EOL devices.
 7. UEFI-only / no BIOS/CSM.
-8. Lots of AMD Stoneyridge devices do not currently have functional AltFw.
+8. Lots of AMD Stoneyridge devices (such as `grunt-barla` do not currently have functional AltFw.
 9. Backlight is broken on AMD Cezanne devices.
 10. Menus such as the boot splash, EDK2 UEFI settings, EFI shell, or GRUB are stretched and look kinda weird.
 ## RW_Legacy
 EVERY AltFw issue (except AltFw issue #7) PLUS
-1. Broken suspend (at least on `snappy alan`).
+1. Broken suspend (at least on `snappy-alan`).
 2. BIOS-only / no UEFI.
 3. Everything before GPU drivers load, such as Windows Boot Loader, Ventoy, GRUB, or verbose boot only shows in a small 800x600 box in the top left portion of the screen, at least on `snappy alan`.
 4. Too minimal, only BIOS settings you get is basically changing boot loader order or selecting a boot device
@@ -297,7 +297,7 @@ EVERY AltFw issue (except AltFw issue #7) PLUS
 14. Updating Arch in TerraOS using `pacman -Syu` will cause Arch to break. A workaround is to use `yay -Syu` or `paru -Syu` instead. 
 15. You will have to manually wait for systemd to compile for Arch from the AUR on TerraOS.
 ## Libreboot
-1. Only supported on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
+1. Only supported on "`nyan`" and "`gru`" boards. Both of these boards are not found on [cros.tech](https://cros.tech) or [chromiumdash](https://chromiumdash.appspot.com), however devices that are referenced to, such as [`gru-kevin`](https://cros.tech/device/kevin/) exists on cros.tech, however without a board name.
 2. Requires WP to be OFF.
 3. Must be unenrolled.
 4. Horrible Linux distro support.
