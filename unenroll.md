@@ -35,8 +35,8 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 | 1 | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 2<sup>2</sup> | v112 to v119<sup>4</sup>| Cryptosmite (to v118) |
 | 3 | v120 to v125<sup>5</sup> | BadRecovery |
-| 4 | v126 to v129 | icarus |
-| 5 | v130+ | CRSH2TTY |
+| 4 | v126 to v131 | icarus (to v129) / br1ck (to v130) |
+| 5 | v132+ | CRSH2TTY (patched) |
 
 <sub><sup>Kv0 is usually a factory setting bug<sup>1</sup></sup></sub> \
 <sub><sup>On some devices, kv2 is actually crOS v111<sup>2</sup></sup></sub> \
