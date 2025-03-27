@@ -154,10 +154,10 @@ BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollm
 13. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
-## UNRELEASED!!: ChromeOS v130 and below - icarus
-I do not have permission to give out information about icarus.
+## ChromeOS v130 and below - icarus
+Icarus is pretty sick. In a nutshell, a server that you should probably self-host acts as a proxy between you and Google, and you connect to it with a Chromebook. This Chromebook will attempt to send requests to Google to obtain enrollment and device status, this proxy server takes those requests, and modifies it to only obtain unenrolled device information, tricking the Chromebook into thinking that the Chromebook was deprovisioned, allowing you to login with a personal Google account, killing FWMP.
 
-1. use a proxy or shimboot or crsh2tty or wait until around janurary 1st, 2025
+1. unfinished guide
 
 ## CRSH2TTY: All versions (PATCHED!)
 CRSH2TTY has been patched! It will no longer work for ANY Chromebook because it was a server-side bug. The steps remain below for archival purposes.
