@@ -12,7 +12,8 @@ Note: You can always use the Shim method for Linux without unenrollment!
   * [SH1mmer](#chromeos-v110-and-below---sh1mmer)
   * [CryptoSmite](#chromeos-v118-and-below---cryptosmite)
   * [BadRecovery](#chromeos-v124-and-below---badrecovery--formerly-olybmmer-------i-have-no-idea-how-accurate-this-guide-is-going-to-be-because-i-have-never-used-badrecovery-before----)
-  * [icarus](#unreleased----chromeos-v130-and-below---icarus)
+  * [icarus](##chromeos-v129-and-below---icarus)
+  * [BadApple+Icarus]()
   * [CRSH2TTY](#crsh2tty--all-versions--patched-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -35,7 +36,7 @@ In the event of a kernskip, you should downgrade to the versions connected to yo
 | 1 | any up to v111<sup>3</sup> | SHroot (to v101) or SH1mmer (to v110) |
 | 2<sup>2</sup> | v112 to v119<sup>4</sup>| Cryptosmite (to v118) |
 | 3 | v120 to v125<sup>5</sup> | BadRecovery |
-| 4 | v126 to v131 | icarus (to v129) / br1ck (to v130) |
+| 4 | v126 to v131 | icarus (to v129) / br1ck (to v130) / BadApple (to v131) |
 | 5 | v132+ | CRSH2TTY (patched) |
 
 <sub><sup>Kv0 is usually a factory setting bug<sup>1</sup></sup></sub> \
@@ -154,10 +155,20 @@ BadRecovery (not to be confused with the iOS exploit) is the preferred unenrollm
 13. Congrats! Now you can set up ChromeOS with a personal Google account and use [Full ROM](/readme.md#method-1-best-method-fullrom) or [AltFw](/readme.md#method-2-easiest-method-altfw--rw_legacy)!
 <img src="/img/tutorial/craaskbowl-unroll-google.png" width="400">
 
-## ChromeOS v130 and below - icarus
+## ChromeOS v129 and below - icarus
 Icarus is pretty sick. In a nutshell, a server that you should probably self-host acts as a proxy between you and Google, and you connect to it with a Chromebook. This Chromebook will attempt to send requests to Google to obtain enrollment and device status, this proxy server takes those requests, and modifies it to only obtain unenrolled device information, tricking the Chromebook into thinking that the Chromebook was deprovisioned, allowing you to login with a personal Google account, killing FWMP.
 
-1. unfinished guide
+1. Follow SH1mmer steps, but then open Payloads, and run Icarus in payloads.
+2. Reboot into ChromeOS, and connect to rather your proxy server which you can set up from [here](https://github.com/CodingHarryJarry/silly-tempfix) or get in [this Discord server after verifiying and checking Kajigs for Icarus servers](https://discord.gg/unblock)
+
+## ChromeOS v129 and below - BadApple + Icarus
+Basically, this abuses both BadApple and Icarus, all without a USB flash drive (unless you need to downgrade). BadApple is an exploit in Ti50/2023+ devices that abuses the Internet Recovery to access a root shell, from which you can use Icarus.
+
+1. Ensure you on on ChromeOS v129 or lower, if you are on KV4, downgrade to a version like v126, if you are on v132, this will not work.
+2. Enter recovery using Esc+refresh+Pwr. If you downgraded from ChromeOS v132, go to Options, then select `Internet Recovery (old)`. If you did not downgrade, just select normal `Internet Recovery`.
+3. Wait for MiniOS to load, then go through the setup process until you get to Wi-Fi setup. Here you need to login to a Wi-Fi network, and then STOP.
+4. Now you press Ctrl+Alt+F3, if it shows a black screen, repeat step 2 but open `Internet Recovery (old)`.
+5. On an Android or Linux device, use Termux/Terminal to host Icarus_
 
 ## CRSH2TTY: All versions (PATCHED!)
 CRSH2TTY has been patched! It will no longer work for ANY Chromebook because it was a server-side bug. The steps remain below for archival purposes.
